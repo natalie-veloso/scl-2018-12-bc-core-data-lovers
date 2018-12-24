@@ -5,11 +5,12 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
-.search {
-  width: 100%;
-  position: relative
-}
 
+
+.search {
+    width: 100%;
+    position: relative;
+}
 .searchTerm {
     float: left;
     width: 100%;
@@ -46,4 +47,10 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.contenedor{
+
+    width: 500px;
+    margin: 0 auto;
 }
