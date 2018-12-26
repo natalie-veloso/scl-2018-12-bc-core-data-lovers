@@ -23,8 +23,9 @@
 // // evento click del botón
   document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();
+document.getElementById('root').innerHTML = ''; 
 let textSearch = document.getElementById('search').value;
 let resultado = poke.filter(textSearch); 
-document.getElementById('root').innerHTML += '<p>' + resultado[0] + '</p>' + '<img src="'+resultado[1]+'">'; 
+document.getElementById('root').innerHTML += '<p>' + resultado[0] + '</p>' + '<img src="'+resultado[1]+'">' + '<p>' + resultado[2] + '</p>'; 
 
 });
