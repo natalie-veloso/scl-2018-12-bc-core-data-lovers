@@ -1,12 +1,20 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
 body{
   background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+
+header{
+  background-color: #71F4D6;
+  background-image: url("img/header.jpg")  #71F4D6 0.7;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 10vw 2em;
+  text-align: center;
 }
-
-
-
 .search {
     width: 100%;
     position: relative;
