@@ -25,7 +25,7 @@
     (evento) => {evento.preventDefault();
 document.getElementById('root').innerHTML = ''; 
 let textSearch = document.getElementById('search').value;
-let resultado = poke.filter(textSearch); 
+let resultado = poke.processData(textSearch); 
 document.getElementById('root').innerHTML += '<p>' + resultado[0] + '</p>' + '<img src="'+resultado[1]+'">' + '<p>' + resultado[2] + '</p>'; 
 
 });
