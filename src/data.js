@@ -1,7 +1,10 @@
+const data = POKEMON.pokemon;
 
 window.poke = {
-  processData: (textSearch) => {
-const data = POKEMON.pokemon; 
+
+  
+processData: (textSearch) => {
+ 
 
 
 let nombres = []; // arreglo vacío donde pushearé los nombres nuevos.
@@ -14,7 +17,7 @@ for (let i = 0; i < data.length; i++) {
   return nombres;
 
   // Mostrar la data en una interfaz: puede ser un card, una tabla, una lista, etc.
-  
+
   },
 
   filterData:(data, condition) => {
@@ -42,6 +45,20 @@ for (let i = 0; i < data.length; i++) {
     // cálculos estadísticos básicos para ser mostrados de 
     // acuerdo a la data proporcionada.
 
+  },
+
+
+  completeData:() => {
+
+    let nameComplete = []; // arreglo vacío donde pushearé los nombres nuevos.
+    for (let i = 0; i < data.length; i++) {
+    
+      
+        nameComplete.push(data[i].name)
+      
+    }
+      return nameComplete;
+    
   },
 
 };
