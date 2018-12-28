@@ -28,4 +28,34 @@ let textSearch = document.getElementById('search').value;
 let resultado = poke.processData(textSearch); 
 document.getElementById('root').innerHTML += '<p>' + resultado[0] + '</p>' + '<img src="'+resultado[1]+'">' + '<p>' + resultado[2] + '</p>'; 
 
+
+
+
+
+
+
+});
+
+
+
+
+let resultadoNombres = poke.completeData();
+let datalist = document.getElementById('names');
+
+document.getElementById('search').addEventListener('keyup', function () {
+    if (this.value.length === 0) {
+        return;
+    }
+
+    // Send Ajax request and loop of its result
+
+    datalist.textContent = '';
+    for (var i = 0; i < resultadoNombres.length; i++) {
+        if (resultadoNombres[i].indexOf(this.value) !== 0) {
+            continue;
+        }
+        var option = document.createElement('option');
+        option.value = resultadoNombres[i];
+        datalist.appendChild(option);
+    }
 });

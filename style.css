@@ -5,9 +5,9 @@ body{
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   }
 
-header{
-  background-color: #71F4D6;
-  background-image: url("img/header.jpg")  #71F4D6 0.7;
+  .poke-background {
+ 
+  background-image: url("img/header.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,10 +55,4 @@ header{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.contenedor{
-
-    width: 500px;
-    margin: 0 auto;
 }
