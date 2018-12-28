@@ -1,60 +1,38 @@
-// const resultadoNombres = nombrePokemones(data); // guardo en la constante el resultado de mi función nombrePokemones (lo que está retornando)
-// //console.log(resultadoNombres);
+ // Buscar con click del botón y Mostrar
 
-// // evento click del botón
-//   document.getElementById('btnSearch').addEventListener('click',
-//     (evento) => {evento.preventDefault();
-//   //document.getElementById('root').innerHTML = ''; // limpio el div cada vez que se hace click
-// let textSearch = document.getElementById('search').value;
+document.getElementById('btnSearch').addEventListener('click',
+    (evento) => {evento.preventDefault();    // Funcion al clickear boton
 
+document.getElementById('root').innerHTML = '';   // cada vez limpia el div donde se muestra el resultado.
 
+let textSearch = document.getElementById('search').value;  // variable de input buscar
+let resultado = poke.processData(textSearch);  // llamando el resultado desde Data.js
 
-//   for (let i = 0; i < resultadoNombres[i].length; i++) {
-//   if( resultadoNombres[i] === textSearch)
-//   {
-//     document.getElementById('root').innerHTML += '<p>' + resultadoNombres + '</p>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-//   }
-// }
-// });
-
-
-// tratando nuevo
-
-// // evento click del botón
-  document.getElementById('btnSearch').addEventListener('click',
-    (evento) => {evento.preventDefault();
-document.getElementById('root').innerHTML = ''; 
-let textSearch = document.getElementById('search').value;
-let resultado = poke.processData(textSearch); 
-document.getElementById('root').innerHTML += '<p>' + resultado[0] + '</p>' + '<img src="'+resultado[1]+'">' + '<p>' + resultado[2] + '</p>'; 
-
-
-
-
-
-
+document.getElementById('root').innerHTML += 
+'<p>' + resultado[0] + '</p>' + '<img src="'+resultado[1]+'">' + '<p>' + resultado[2] + '</p>';   // mostrando el rsultado en array para diferentes keys del objeto.
 
 });
 
 
 // Autocompletar desde Data con datalist
 
-let resultadoNombres = poke.completeData();
+let resultadoNombres = poke.completeData(); // llamando propiedad nombre desde data.js
 
-let datalist = document.getElementById('names');
+let datalist = document.getElementById('names'); // variable para mostrar en datalist
 
 document.getElementById('search').addEventListener('keyup', function () {
   let searchComplete = document.getElementById('search').value;
-    if (searchComplete.length === 0) {
+    if (searchComplete.length === 0) { // si el input search es igual a 0 lo devuelve.
         return;
     }
-    datalist.textContent = '';
+    datalist.textContent = ''; // limpia la busqueda por letra.
+    // recorre la data  la muestra en el search
     for (let i = 0; i < resultadoNombres.length; i++) {
         if (resultadoNombres[i].toLowerCase().indexOf(searchComplete.toLowerCase()) !== 0) {
             continue;
         }
         let option = document.createElement('option');
         option.value = resultadoNombres[i];
-        datalist.appendChild(option);
+        datalist.appendChild(option); // muestra la lista de datos en datalist
     }
 });
