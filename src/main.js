@@ -37,24 +37,23 @@ document.getElementById('root').innerHTML += '<p>' + resultado[0] + '</p>' + '<i
 });
 
 
-
+// Autocompletar desde Data con datalist
 
 let resultadoNombres = poke.completeData();
+
 let datalist = document.getElementById('names');
 
 document.getElementById('search').addEventListener('keyup', function () {
-    if (this.value.length === 0) {
+  let searchComplete = document.getElementById('search').value;
+    if (searchComplete.length === 0) {
         return;
     }
-
-    // Send Ajax request and loop of its result
-
     datalist.textContent = '';
-    for (var i = 0; i < resultadoNombres.length; i++) {
-        if (resultadoNombres[i].indexOf(this.value) !== 0) {
+    for (let i = 0; i < resultadoNombres.length; i++) {
+        if (resultadoNombres[i].toLowerCase().indexOf(searchComplete.toLowerCase()) !== 0) {
             continue;
         }
-        var option = document.createElement('option');
+        let option = document.createElement('option');
         option.value = resultadoNombres[i];
         datalist.appendChild(option);
     }
