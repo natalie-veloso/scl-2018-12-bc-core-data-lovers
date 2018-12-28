@@ -6,36 +6,41 @@
     <title>Pokemon School</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
 
    
   </head>
   <body>
 <header></header>
 
-      <section class="poke-background  class="hero">
+
+      <section class="hero poke-background">
           <div class="hero-body">
            <!-- Search form -->
-           <div class="wrap search ">
-       
-           <input type="text"  name="name" list="names"  id="search"  class="searchTerm" placeholder="Buscar Pokemon">
-           <button id="btnSearch" type="submit" class="searchButton"> <i class="fas fa-search"></i></button>
-            <div class="scrollable">
-             <datalist id="names" ></datalist>
-            </div>
-           </div>
+             <div class="columns">
+                <div class="column"></div>
+            
+                <div class="column">
+                    <div class="control">
+                  <input type="text"  name="name" list="names"  id="search"  class="input is-success" placeholder="Buscar Pokemon">
+                      <a id="btnSearch" type="submit" class="button is-primary searchButton">
+                        <span class="icon"><i class="fas fa-search"></i></span>
+                       </a>
+                       <div class="scrollable"><datalist id="names" ></datalist></div>
+                      </div>
+                </div>
+             </div>
           </div>
-       </section>
+     </section>
   
    <!-- Pokemon Profile section -->
-    <section class="container-fluid">
-      <div id="root"></div>
-
-
-    </section>
+      <section class="container">
+             <div id="root"></div>
+      </section>
     
   
      <!-- Data JavaScript -->
+     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
