@@ -4,13 +4,13 @@ document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();    // Funcion al clickear boton
 
 document.getElementById('root').innerHTML = '';   // cada vez limpia el div donde se muestra el resultado.
-
 let textSearch = document.getElementById('search').value;  // variable de input buscar
 let resultado = poke.processData(textSearch);  // llamando el resultado desde Data.js
 
 document.getElementById('root').innerHTML += 
 '<p>' + resultado[0] + '</p>' + '<img src="'+resultado[1]+'">' + '<p>' + resultado[2] + '</p>';   // mostrando el rsultado en array para diferentes keys del objeto.
 
+document.getElementById("search").value = "";
 });
 
 
@@ -30,9 +30,12 @@ document.getElementById('search').addEventListener('keyup', function () {
     for (let i = 0; i < resultadoNombres.length; i++) {
         if (resultadoNombres[i].toLowerCase().indexOf(searchComplete.toLowerCase()) !== 0) {
             continue;
+            
         }
         let option = document.createElement('option');
         option.value = resultadoNombres[i];
         datalist.appendChild(option); // muestra la lista de datos en datalist
+        
     }
+    
 });
