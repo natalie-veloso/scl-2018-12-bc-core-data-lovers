@@ -52,10 +52,10 @@ const POKEMON = {
       1.6
     ],
     "weaknesses": [
-      "Fire",
-      "Ice",
-      "Flying",
-      "Psychic"
+      " Fuego ",
+      " Hielo ",
+      " Volador ",
+      " Psiquico "
     ],
     "prev_evolution": [{
       "num": "001",
