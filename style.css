@@ -5,15 +5,51 @@ body{
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   }
 
-  .hero {
+  .seccionuno {
  
     background: black url(img/header.jpg) center / cover;
 
 }
 
+.imgProfile{
+  width: 200px;
+  margin-bottom: 30px;
+}
+
 
 .scrollable {
-   overflow: scroll; width: 100%; height:300px;
+  overflow: scroll; width: 100%; height:300px;
+  position: absolute;
+}
+
+.secciondos{
+  background:linear-gradient(150deg,#31709d -10%,#bdd3c4 110%);
+}
+
+.input-size{
+  width: 50%!important;
+
+}
+
+
+
+
+/*
+ *Scrolling
+ */
+
+ a[ id= "root" ]:target ~ #pokeProfile div.panel {
+  -webkit-transform: translateY( 0px);
+  transform: translateY( 0px );
+}
+
+a[ id= "galeria" ]:target ~ #main article.panel {
+  -webkit-transform: translateY( -100% );
+  transform: translateY( -100% );
+}
+a[ id= "contacto" ]:target ~ #main article.panel {
+  -webkit-transform: translateY( -200% );
+  transform: translateY( -200% );
 }
 
 

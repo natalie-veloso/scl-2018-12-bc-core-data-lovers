@@ -14,18 +14,18 @@
 <header></header>
 
 
-      <section class="hero is-fullheight">
+      <section class="hero is-fullheight seccionuno">
           <div class="hero-body">
               <div class="container has-text-centered">
            <!-- Search form -->
-             <div class="columns">
-                <div class="column vertical-center">
-                  <img src="img/logo.png">
+             <div class="columns level">
+                <div class="column level-item">
+                    
                 </div>
             
-                <div class="column vertical-center">
+                <div class="column level-item">
                     <div class="control">
-                  <input type="text"  name="name" list="names"  id="search"  class="input is-success" placeholder="Buscar Pokemon">
+                  <input type="text"  name="name" list="names"  id="search"  class="input is-success input-size" placeholder="Buscar Pokemon">
                       <a id="btnSearch" type="submit" class="button is-primary searchButton">
                         <span class="icon"><i class="fas fa-search"></i></span>
                        </a>
@@ -38,8 +38,16 @@
      </section>
   
    <!-- Pokemon Profile section -->
-      <section class="container">
-             <div id="root" ></div>
+      <section id="pokeProfile" class="hero is-fullheight secciondos">
+          <div class="hero-body">
+              <div class="container has-text-centered">
+                  <div class="columns">
+                      <div class="column">
+                          <div id="root" ></div>
+                       </div>
+                  </div>
+               </div>
+          </div>
       </section>
     
   
