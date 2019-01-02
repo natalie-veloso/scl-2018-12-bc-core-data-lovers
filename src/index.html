@@ -15,26 +15,47 @@
 
 
       <section class="hero is-fullheight seccionuno">
+  <!-- Hero head: will stick at the top -->
+          <header class="hero-head">
+              <nav class="navbar">
+                <div class="container">
+                  <div class="navbar-brand">
+                    <a class="navbar-item">
+                     <h1 class="title is-3 is-$white">PokeSchool</h1>
+                    </a>
+                    <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </span>
+                  </div>
+                </div>
+              </nav>
+            </header>
+
+<!-- Hero content: will be in the middle -->
           <div class="hero-body">
               <div class="container has-text-centered">
-           <!-- Search form -->
-             <div class="columns level">
-                <div class="column level-item">
-                    
-                </div>
-            
-                <div class="column level-item">
-                    <div class="control">
+               
+                <h1 class="title">
+                 ¡Bienvenidos a Pokemon School!
+                 </h1>
+                 <h2 class="subtitle">
+                    Aquí podrás obtener toda la información que necesites para comenzar con Pokémon Go
+                     y ser el mejor, ¡mejor que nadie más! capturando pokémon de la región de Kanto.
+                </h2>
+                 <!-- Search form -->
+                    <div class="searching">
                   <input type="text"  name="name" list="names"  id="search"  class="input is-success input-size" placeholder="Buscar Pokemon">
                       <a id="btnSearch" type="submit" class="button is-primary searchButton">
                         <span class="icon"><i class="fas fa-search"></i></span>
                        </a>
                        <div class="scrollable"><datalist id="names" ></datalist></div>
                       </div>
-                </div>
+                
              </div>
             </div>
-          </div>
+          
      </section>
   
    <!-- Pokemon Profile section -->
@@ -50,6 +71,22 @@
           </div>
       </section>
     
+
+        <!-- Pokemon Profile section -->
+        <section id="pokefilter" class="hero is-fullheight secciontres">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                          First column
+                        </div>
+                    </div>
+                    <div class="columns is-multiline" id="allPokemons">
+
+                     </div>
+                 </div>
+            </div>
+        </section>
   
      <!-- Data JavaScript -->
      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>

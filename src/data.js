@@ -11,7 +11,7 @@ let nombres = []; // arreglo vacío donde pushearé los nombres nuevos.
 for (let i = 0; i < data.length; i++) {
 
   if (data[i].name === textSearch){
-    nombres.push(data[i].name, data[i].img, data[i].weaknesses)
+    nombres.push(data[i].name, data[i].img, data[i].weaknesses, data[i].type)
   }
 }
   return nombres;
@@ -24,6 +24,8 @@ for (let i = 0; i < data.length; i++) {
 
   // esta función filter o filtrar recibiría la data,
   //  y nos retornaría aquellos datos que sí cumplan con la condición.
+
+   
 
 },
 
