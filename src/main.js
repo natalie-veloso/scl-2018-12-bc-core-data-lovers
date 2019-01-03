@@ -8,12 +8,14 @@ let textSearch = document.getElementById('search').value;  // variable de input 
 let resultado = poke.processData(textSearch);  // llamando el resultado desde Data.js
 
 document.getElementById('root').innerHTML += 
-'<div class ="pokemonProfile">' + '<h3 class="title is-3">' + resultado[0] + '</h3>' + '<img class="imgProfile" src="'+resultado[1]+'">' + '<p class="subtitle">' + resultado[2] + '</p>' + + '<p class="subtitle">' + resultado[3] + '</p>' + '</div>';   // mostrando el rsultado en array para diferentes keys del objeto.
+'<div class ="pokemonProfile">' + '<h3 class="title is-3">' + resultado[0] + '</h3>' + '<img class="imgProfile" src="'+resultado[1]+'">' + '<p class="subtitle">' + resultado[2] + '</p>' + '<p class="subtitle">' + resultado[3] + '</p>' + '</div>';   // mostrando el rsultado en array para diferentes keys del objeto.
 let element = document.getElementById("root");
 
+// scroll para que al apretar boton buscar me posicione en la pantalla de perfil
 element.scrollIntoView();
 element.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start' });
 
+// limpia el input
 document.getElementById("search").value = "";
 });
 
