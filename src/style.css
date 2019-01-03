@@ -8,6 +8,7 @@ body{
   .seccionuno {
  
     background: black url(img/header.jpg) center / cover;
+  
 
 }
 
@@ -16,6 +17,10 @@ body{
   margin-bottom: 30px;
 }
 
+.imgfilter{
+  width: 80px;
+  margin: 10px;
+}
 
 .scrollable {
   overflow: scroll; width: 100%; height:300px;
@@ -30,9 +35,16 @@ body{
   width: 50%!important;
 
 }
+#allPokemons{
+display: flex;
+height: 400px;
+overflow-y: scroll;
+}
 
 
-
+.showFilterPokemon{
+flex-wrap: wrap;
+}
 
 /*
  *Scrolling
