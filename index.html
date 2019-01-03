@@ -19,12 +19,12 @@
                 <div class="container">
                   <div class="navbar-brand">
                     <a class="navbar-item">
-                     <h1 class="title is-3 is-$white">PokeSchool</h1>
+                     <h1 class="title is-3 has-text-white">PokeSchool</h1>
                     </a>
                     <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                      <span></span>
-                      <span></span>
-                      <span></span>
+                      <span>j</span>
+                      <span>j</span>
+                      <span>j</span>
                     </span>
                   </div>
                 </div>
@@ -32,13 +32,14 @@
             </header>
 
 <!-- Hero content: will be in the middle -->
-          <div class="hero-body">
+          <section class="hero-body">
               <div class="container has-text-centered">
+
                
-                <h1 class="title">
+                <h1 class="title has-text-white">
                  ¡Bienvenidos a Pokemon School!
                  </h1>
-                 <h2 class="subtitle">
+                 <h2 class="subtitle has-text-white">
                     Aquí podrás obtener toda la información que necesites para comenzar con Pokémon Go
                      y ser el mejor, ¡mejor que nadie más! capturando pokémon de la región de Kanto.
                 </h2>
@@ -52,9 +53,10 @@
                       </div>
                 
              </div>
+            </section>
             </div>
           
-          </div>
+          
   
    <!-- Pokemon Profile section -->
       <section id="pokeProfile" class="hero is-fullheight secciondos">
@@ -62,7 +64,11 @@
               <div class="container has-text-centered">
                   <div class="columns">
                       <div class="column">
-                          <div id="root" ></div>
+                        
+                          <div id="root" >
+                              <h3>¿Quien es ese Pokemon?</h3>
+                              <img src="">
+                          </div>
                        </div>
                   </div>
                </div>
@@ -70,20 +76,57 @@
       </section>
     
 
-        <!-- Pokemon Profile section -->
+        <!-- Pokemon filter section -->
         <section id="pokefilter" class="hero is-fullheight secciontres">
             <div class="hero-body">
                 <div class="container">
-                    <div class="tabs is-boxed">
-                        <ul>
-                          <li class="is-active"><a>A-Z</a></li>
-                          <li><a>Z-A</a></li>
-                          <li><a>Tipos</a></li>
-                          
-                        </ul>
-                      </div>
-                    <div class="columns is-multiline" id="allPokemons">
-                       
+                    <div class="columns">
+                      <!-- Aside buscador ordenar y tipos -->
+                        <aside class="column is-3">
+                          <!-- Pokemon filter for type section -->
+                            <div class="field">
+                                <div class="control">
+                                  <div class="select is-success">
+                                    <select>
+                                      <option>Tipos de Pokemon</option>
+                                      <option>Fuego</option>
+                                      <option>Agua</option>
+                                      <option>Acero</option>
+                                      <option>Planta</option>
+                                      <option>Fantasma</option>
+                                      <option>Hada</option>
+                                      <option>Psíquico</option>
+                                      <option>Lucha</option>
+                                      <option>Eléctrico</option>
+                                      <option>Siniestro</option>
+                                      <option>Veneno</option>
+                                      <option>Bicho</option>
+                                      <option>Roca</option>
+                                      <option>Hielo</option>
+                                      <option>Dragón</option>
+                                      <option>Normal</option>
+                                      <option>Volador</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Pokemon Ordenar section -->
+                              <div class="field">
+                                  <div class="control">
+                                    <div class="select is-primary">
+                                      <select>
+                                        <option>Ordenar</option>
+                                        <option>A-Z</option>
+                                        <option>Z-A</option>
+                                        <option>Identificación Kanto</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                        </aside>
+                        <!-- Mostrar Pokemon filter for type section -->
+                    <div class="column">
+                        <div class="showFilterPokemon"id="allPokemons"> </div>
                      </div>
                  </div>
             </div>

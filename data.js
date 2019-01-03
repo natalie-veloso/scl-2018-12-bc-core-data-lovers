@@ -1,11 +1,9 @@
-const data = POKEMON.pokemon;
-
 window.poke = {
 
   
 processData: (textSearch) => {
  
-
+const data = POKEMON.pokemon;
 
 let nombres = []; // arreglo vacío donde pushearé los nombres nuevos.
 for (let i = 0; i < data.length; i++) {
@@ -21,6 +19,7 @@ for (let i = 0; i < data.length; i++) {
   },
 
   filterData:(data, condition) => {
+    
 
   // esta función filter o filtrar recibiría la data,
   //  y nos retornaría aquellos datos que sí cumplan con la condición.
@@ -31,6 +30,8 @@ for (let i = 0; i < data.length; i++) {
 
 
   sortData:(data, sortBy, sortOrder) => {
+
+   data.sort(function(a, b){return b-a});
 
     // esta función sort u ordenar recibe tres parámetros.
     //  El primer parámetro, data, nos entrega los datos. 
@@ -52,15 +53,25 @@ for (let i = 0; i < data.length; i++) {
 
 
   completeData:() => {
-
+    const data = POKEMON.pokemon;
     let nameComplete = []; // arreglo vacío donde pushearé los nombres nuevos.
     for (let i = 0; i < data.length; i++) {
-    
-      
         nameComplete.push(data[i].name)
       
     }
       return nameComplete;
+    
+  },
+
+  showDatafilter:() => {
+    const data = POKEMON.pokemon;
+    let imgData = []; // arreglo vacío donde pushearé los nombres nuevos.
+    for (let i = 0; i < data.length; i++) {
+     imgData.push(data[i].img)
+      
+    }
+      return imgData;
+      
     
   },
 

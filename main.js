@@ -20,6 +20,8 @@ document.getElementById("search").value = "";
 });
 
 
+
+
 // Autocompletar desde Data con datalist
 
 let resultadoNombres = poke.completeData(); // llamando propiedad nombre desde data.js
@@ -46,10 +48,11 @@ document.getElementById('search').addEventListener('keyup', function () {
     
     });
 
+    
 
     // filtrar y ordenar
-let resultadoAllPokemons = poke.completeData(); 
+let resultadoAllPokemons = poke.showDatafilter(); 
 document.getElementById('allPokemons').innerHTML = ''; // limpio el div cada vez que se hace click
  for (let i = 0; i < resultadoAllPokemons.length; i++) {
-    document.getElementById('allPokemons').innerHTML += '<div class="column">' + resultadoAllPokemons[i] + '</div>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+    document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultadoAllPokemons[i] + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
   }
