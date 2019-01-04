@@ -19,7 +19,7 @@ for (let i = 0; i < data.length; i++) {
   },
 
   filterData:(data, condition) => {
-    
+  
 
   // esta función filter o filtrar recibiría la data,
   //  y nos retornaría aquellos datos que sí cumplan con la condición.
@@ -30,9 +30,23 @@ for (let i = 0; i < data.length; i++) {
 
 
   sortData:(data, sortBy, sortOrder) => {
+  data.sort(function(a, b) {
+     let nameA = a.name.toUpperCase(); // ignore upper and lowercase
+      let nameB = b.name.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB ) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+    
+      // names must be equal
+      return 0;
+    });
+     return data;
+    
 
-   data.sort(function(a, b){return b-a});
-
+    
     // esta función sort u ordenar recibe tres parámetros.
     //  El primer parámetro, data, nos entrega los datos. 
     //  El segundo parámetro, sortBy, nos dice con respecto
@@ -70,11 +84,19 @@ for (let i = 0; i < data.length; i++) {
      imgData.push(data[i].img)
       
     }
-      return imgData;
-      
-    
+    return imgData;
   },
 
 };
 
 
+
+
+//     function filterData(data, condition)  {
+
+//       const tiposDePokemon = data.filter(tipos =>{
+//       return tipos.type.indexOf(condition) !== -1;
+//        })
+//        return tiposDePokemon;
+//       }
+      

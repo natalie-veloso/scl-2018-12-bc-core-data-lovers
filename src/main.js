@@ -56,3 +56,29 @@ document.getElementById('allPokemons').innerHTML = ''; // limpio el div cada vez
  for (let i = 0; i < resultadoAllPokemons.length; i++) {
     document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultadoAllPokemons[i] + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
   }
+
+//  ordenar
+  const data = POKEMON.pokemon;
+  let sortBy = document.getElementById('orderPokemon').value; 
+  let sortOrder = document.getElementById('orderPokemon').value; 
+  let resultsort = poke.sortData(data, sortBy, sortOrder); 
+document.getElementById("orderPokemon").addEventListener("change", () => {
+document.getElementById('allPokemons').innerHTML  = '';
+
+ if (document.getElementById("orderPokemon").value === "A-Z") {
+    for (let i = 0; i < resultsort.length; i++){
+        document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultsort[i].img + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+   }
+}
+   else if(document.getElementById("orderPokemon").value === "1-151") {
+    for (let i = 0; i < resultadoAllPokemons.length; i++) {
+        document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultadoAllPokemons[i] + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+      }
+    
+   }
+   
+     
+
+
+
+});
