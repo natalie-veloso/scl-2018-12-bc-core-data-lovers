@@ -19,8 +19,13 @@ for (let i = 0; i < data.length; i++) {
   },
 
   filterData:(data, condition) => {
-  
 
+    let typePoke = data.filter(tipos =>{
+            return tipos.type.indexOf(condition) !== -1;
+             })
+             return typePoke;
+            
+             
   // esta función filter o filtrar recibiría la data,
   //  y nos retornaría aquellos datos que sí cumplan con la condición.
 

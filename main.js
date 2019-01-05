@@ -67,7 +67,7 @@ document.getElementById('allPokemons').innerHTML  = '';
 
  if (document.getElementById("orderPokemon").value === "A-Z") {
     for (let i = 0; i < resultsort.length; i++){
-        document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultsort[i].img + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+        document.getElementById('allPokemons').innerHTML += '<span><a href=""><img class="imgfilter" src="' + resultsort[i].img + ' "></a></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
    }
 }
    else if(document.getElementById("orderPokemon").value === "1-151") {
@@ -75,10 +75,16 @@ document.getElementById('allPokemons').innerHTML  = '';
         document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultadoAllPokemons[i] + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
       }
     
-   }
+   }  
+
+});
+
+
+
+document.getElementById("typePokemon").addEventListener("change", () => {
+    document.getElementById('allPokemons').innerHTML  = '';
+    
+        
+   console.log('hola')
    
-     
-
-
-
 });
