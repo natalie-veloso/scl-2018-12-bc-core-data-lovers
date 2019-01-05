@@ -1,3 +1,8 @@
+global.window = global;
+global.chai = require('chai');
+require('../src/data.js');
+require('./data.pokemon.pokemon.js');
+
 assert = require('assert');
 describe('poke', () => {
 
