@@ -80,21 +80,11 @@ document.getElementById('allPokemons').innerHTML  = '';
 });
 
 
-let resultfilter = poke.filterData(data); 
+
 document.getElementById("typePokemon").addEventListener("change", () => {
     document.getElementById('allPokemons').innerHTML  = '';
-    if (document.getElementById("typePokemon").value === "Fuego") {
-        for (let i = 0; i < resultfilter.length; i++){
-            document.getElementById('allPokemons').innerHTML += '<span><a href=""><img class="imgfilter" src="' + resultfilter[i] + ' "></a></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-       }
-    }
-
-    if (document.getElementById("typePokemon").value === "Planta") {
-        for (let i = 0; i < resultfilter.length; i++){
-            document.getElementById('allPokemons').innerHTML += '<span><a href=""><img class="imgfilter" src="' + resultfilter[i] + ' "></a></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-       }
-    }
+    
         
-   
+   console.log('hola')
    
 });

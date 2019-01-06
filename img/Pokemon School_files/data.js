@@ -18,25 +18,22 @@ for (let i = 0; i < data.length; i++) {
 
   },
 
-  filterData:(data, elemento) => {
+  filterData:(data, tipos) => {
 
-    let typePoke = data.filter((elemento) => {
-      return elemento.type.indexOf("Fuego") >= 0 })
-      
-             .map(function(elemento){
-             return elemento.img;
+    let typePoke = data.filter(tipos =>{
+      return tipos.type === "Fuego";
+             })
+             .map(function(tipos){
+             return tipos.name;
             });
-           return typePoke;
+             console.log(typePoke);
             
+             
+             
+  // esta función filter o filtrar recibiría la data,
+  //  y nos retornaría aquellos datos que sí cumplan con la condición.
 
-  // const filteredResults = results.filter(item =>
-  //   filters
-  //     .map(val => item.category.indexOf(val))
-  //     .map(val => (val > -1 ? true : false))
-  //     .reduce((acc, cum) => acc && cum)
-  // );
-
-// esta función filter o filtrar recibiría la data,  y nos retornaría aquellos datos que sí cumplan con la condición.
+   
 
 },
 
