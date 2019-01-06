@@ -711,7 +711,7 @@ const POKEMON = {
     "name": "Pikachu",
     "img": "http://www.serebii.net/pokemongo/pokemon/025.png",
     "type": [
-      "ElEléctricoctrico"
+      "Eléctrico"
     ],
     "height": "0.41 m",
     "weight": "6.0 kg",

@@ -5,7 +5,6 @@ window.poke = {
   
 processData: (textSearch) => {
 
-
 let nombres = []; // arreglo vacío donde pushearé los nombres nuevos.
 for (let i = 0; i < data.length; i++) {
 
@@ -19,15 +18,14 @@ for (let i = 0; i < data.length; i++) {
 
   },
 
-  filterData:() => {
+  filterData:(selectedchoose) => {
 
-    let typePoke = data.filter((elemento) => {
-      return elemento.type.indexOf("Fuego") >= 0 })
-      
-             .map(function(elemento){
-             return elemento.img;
-            });
+    let typePoke = data.filter(d => d.type[0] === selectedchoose).map(function(d){
+      return d.img;
+     });
            return typePoke;
+
+          
             
 
 // esta función filter o filtrar recibiría la data,  y nos retornaría aquellos datos que sí cumplan con la condición.
