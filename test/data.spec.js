@@ -1,24 +1,26 @@
-global.window = global;
-global.chai = require('chai');
+global.window=global
+global.chai=require("chai");
 require('../src/data.js');
-require('./data.pokemon.pokemon.js');
+require('../src/data/pokemon/pokemon.js')
 
-assert = require('assert');
+const assert = require("assert"); 
 describe('poke', () => {
 
   it('debería ser un objeto', () => {
-    assert.equal(typeof poke, 'object');
+    assert.equal(typeof window.poke, 'object');
   });
 });
 
+
+
 describe('poke.processData', () => {
   it('debería ser una función', () => {
-    assert.equal(typeof poke.processData, 'function');
+    assert.equal(typeof window.poke.processData, 'function');
   });
 
 
   it('debería retornar "Bulbasaur" para "Bulbasaur"', () => {
-    assert.equal(poke.processData ('Bulbasaur'), 'Bulbasaur');
+    assert.equal(window.poke.processData ('Bulbasaur'), 'Bulbasaur');
   });
 });
 
@@ -26,10 +28,26 @@ describe('poke.processData', () => {
 
 describe('poke.completeData', () => {
   it('debería ser una función', () => {
-    assert.equal(typeof poke.processData, 'function');
+    assert.equal(typeof window.poke.processData, 'function');
   });
 
   it('debería retornar "Bulbasaur" para "Bulbasaur"', () => {
-    assert.equal(poke.processData ('Bulbasaur'), 'Bulbasaur');
+    assert.equal(window.poke.processData ('Bulbasaur'), 'Bulbasaur');
   });
 });
+
+
+
+
+// describe('pokego.filterData', () => {
+//   it('debería ser una función', () => {
+//     assert.equal(typeof window.pokego2.filterData, 'function');
+//   })
+
+//   it('debería retornar "Dewgong", "Cloyster", "Jynx", "Lapras", "Articuno" para "type" de "Ice"', () => {
+//     assert.equal(window.pokego2.filterData("type", "Ice"), ["Dewgong", "Cloyster", "Jynx", "Lapras", "Articuno"])
+//   })
+
+
+
+

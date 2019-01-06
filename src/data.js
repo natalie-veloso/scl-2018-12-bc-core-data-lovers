@@ -1,9 +1,10 @@
+const data = POKEMON.pokemon;
+
 window.poke = {
 
   
 processData: (textSearch) => {
- 
-const data = POKEMON.pokemon;
+
 
 let nombres = []; // arreglo vacío donde pushearé los nombres nuevos.
 for (let i = 0; i < data.length; i++) {
@@ -18,7 +19,7 @@ for (let i = 0; i < data.length; i++) {
 
   },
 
-  filterData:(data, elemento) => {
+  filterData:() => {
 
     let typePoke = data.filter((elemento) => {
       return elemento.type.indexOf("Fuego") >= 0 })
@@ -29,19 +30,12 @@ for (let i = 0; i < data.length; i++) {
            return typePoke;
             
 
-  // const filteredResults = results.filter(item =>
-  //   filters
-  //     .map(val => item.category.indexOf(val))
-  //     .map(val => (val > -1 ? true : false))
-  //     .reduce((acc, cum) => acc && cum)
-  // );
-
 // esta función filter o filtrar recibiría la data,  y nos retornaría aquellos datos que sí cumplan con la condición.
 
 },
 
 
-  sortData:(data, sortBy, sortOrder) => {
+  sortData:() => {
   data.sort(function(a, b) {
      let nameA = a.name.toUpperCase(); // ignore upper and lowercase
       let nameB = b.name.toUpperCase(); // ignore upper and lowercase
@@ -69,7 +63,7 @@ for (let i = 0; i < data.length; i++) {
   },
 
 
-  computeStats:(data) => {
+  computeStats:() => {
 
     // la función compute o calcular, nos permitirá hacer 
     // cálculos estadísticos básicos para ser mostrados de 
@@ -79,7 +73,7 @@ for (let i = 0; i < data.length; i++) {
 
 
   completeData:() => {
-    const data = POKEMON.pokemon;
+ 
     let nameComplete = []; // arreglo vacío donde pushearé los nombres nuevos.
     for (let i = 0; i < data.length; i++) {
         nameComplete.push(data[i].name)
@@ -90,7 +84,7 @@ for (let i = 0; i < data.length; i++) {
   },
 
   showDatafilter:() => {
-    const data = POKEMON.pokemon;
+
     let imgData = []; // arreglo vacío donde pushearé los nombres nuevos.
     for (let i = 0; i < data.length; i++) {
      imgData.push(data[i].img)
@@ -111,4 +105,3 @@ for (let i = 0; i < data.length; i++) {
 //        })
 //        return tiposDePokemon;
 //       }
-      
