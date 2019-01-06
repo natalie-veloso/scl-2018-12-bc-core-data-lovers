@@ -1,11 +1,10 @@
 // Buscar con click del botón y Mostrar
-
 document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();    // Funcion al clickear boton
 
 document.getElementById('root').innerHTML = '';   // cada vez limpia el div donde se muestra el resultado.
 let textSearch = document.getElementById('search').value;  // variable de input buscar
-let resultado = poke.processData(textSearch);  // llamando el resultado desde Data.js
+let resultado = window.poke.processData(textSearch);  // llamando el resultado desde Data.js
 
 document.getElementById('root').innerHTML += 
 '<div class ="pokemonProfile">' + '<h3 class="title is-3">' + resultado[0] + '</h3>' + '<img class="imgProfile" src="'+resultado[1]+'">' + '<p class="subtitle">' + resultado[2] + '</p>' + '<p class="subtitle">' + resultado[3] + '</p>' + '</div>';   // mostrando el rsultado en array para diferentes keys del objeto.
@@ -24,7 +23,7 @@ document.getElementById("search").value = "";
 
 // Autocompletar desde Data con datalist
 
-let resultadoNombres = poke.completeData(); // llamando propiedad nombre desde data.js
+let resultadoNombres = window.poke.completeData(); // llamando propiedad nombre desde data.js
 
 let datalist = document.getElementById('names'); // variable para mostrar en datalist
 
@@ -51,17 +50,15 @@ document.getElementById('search').addEventListener('keyup', function () {
     
 
     // filtrar y ordenar
-let resultadoAllPokemons = poke.showDatafilter(); 
+let resultadoAllPokemons = window.poke.showDatafilter(); 
 document.getElementById('allPokemons').innerHTML = ''; // limpio el div cada vez que se hace click
  for (let i = 0; i < resultadoAllPokemons.length; i++) {
     document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultadoAllPokemons[i] + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
   }
 
 //  ordenar
-  const data = POKEMON.pokemon;
-  let sortBy = document.getElementById('orderPokemon').value; 
-  let sortOrder = document.getElementById('orderPokemon').value; 
-  let resultsort = poke.sortData(data, sortBy, sortOrder); 
+ 
+  let resultsort = window.poke.sortData(); 
 document.getElementById("orderPokemon").addEventListener("change", () => {
 document.getElementById('allPokemons').innerHTML  = '';
 
@@ -80,7 +77,7 @@ document.getElementById('allPokemons').innerHTML  = '';
 });
 
 
-let resultfilter = poke.filterData(data); 
+let resultfilter = window.poke.filterData(); 
 document.getElementById("typePokemon").addEventListener("change", () => {
     document.getElementById('allPokemons').innerHTML  = '';
     if (document.getElementById("typePokemon").value === "Fuego") {
