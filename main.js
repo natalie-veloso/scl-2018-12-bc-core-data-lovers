@@ -1,3 +1,4 @@
+
 // Buscar con click del botón y Mostrar
 document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();    // Funcion al clickear boton
@@ -79,7 +80,7 @@ document.getElementById('allPokemons').innerHTML  = '';
 
 document.getElementById("typePokemon").addEventListener("change", choose => {
     let selectedchoose = choose.target.value;
-    let resultfilter = window.poke.filterData(selectedchoose); 
+    let resultfilter = window.poke.filterData(data, selectedchoose); 
     document.getElementById('allPokemons').innerHTML  = '';
 
            for (let i = 0; i < resultfilter.length; i++){

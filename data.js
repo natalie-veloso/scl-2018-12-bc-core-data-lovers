@@ -18,9 +18,10 @@ for (let i = 0; i < data.length; i++) {
 
   },
 
-  filterData:(selectedchoose) => {
+  filterData:(data, selectedchoose) => {
 
-    let typePoke = data.filter(elemento => elemento.type[0] === selectedchoose).map(function(elemento){
+    let typePoke = data.filter(elemento => elemento.type[0] === selectedchoose)
+    .map(function(elemento){
       return elemento.img;
      });
            return typePoke;
@@ -63,6 +64,15 @@ for (let i = 0; i < data.length; i++) {
 
   computeStats:() => {
 
+
+// var sumatoriaObjeto = arreglo.reduce(function(acumulador, siguienteValor){
+//   return {
+//     edad: acumulador.edad + siguienteValor.edad
+//   };
+// }, {edad: 0}); //Si no hay nada, regresamos un objeto con edad = 0. No hay necesidad de devolver el nombre, pues no es necesario
+ 
+// var promedioEdad = sumatoriaObjeto.edad / arreglo.length;
+
     // la función compute o calcular, nos permitirá hacer 
     // cálculos estadísticos básicos para ser mostrados de 
     // acuerdo a la data proporcionada.
@@ -92,8 +102,6 @@ for (let i = 0; i < data.length; i++) {
   },
 
 };
-
-
 
 
 //     function filterData(data, condition)  {
