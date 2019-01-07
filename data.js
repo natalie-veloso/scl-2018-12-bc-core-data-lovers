@@ -20,8 +20,8 @@ for (let i = 0; i < data.length; i++) {
 
   filterData:(selectedchoose) => {
 
-    let typePoke = data.filter(d => d.type[0] === selectedchoose).map(function(d){
-      return d.img;
+    let typePoke = data.filter(elemento => elemento.type[0] === selectedchoose).map(function(elemento){
+      return elemento.img;
      });
            return typePoke;
 

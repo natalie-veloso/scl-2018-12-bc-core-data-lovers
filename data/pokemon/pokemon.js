@@ -989,14 +989,14 @@ const POKEMON = {
   }, {
     "id": 35,
     "num": "035",
-    "name": "CleHada",
+    "name": "Clefairy",
     "img": "http://www.serebii.net/pokemongo/pokemon/035.png",
     "type": [
       "Normal"
     ],
     "height": "0.61 m",
     "weight": "7.5 kg",
-    "candy": "CleHada Candy",
+    "candy": "Clefeiry Candy",
     "candy_count": 50,
     "egg": "2 km",
     "spawn_chance": 0.92,
@@ -1023,7 +1023,7 @@ const POKEMON = {
     ],
     "height": "1.30 m",
     "weight": "40.0 kg",
-    "candy": "CleHada Candy",
+    "candy": "Clefairy Candy",
     "egg": "Not in Eggs",
     "spawn_chance": 0.012,
     "avg_spawns": 1.2,
@@ -1034,7 +1034,7 @@ const POKEMON = {
     ],
     "prev_evolution": [{
       "num": "035",
-      "name": "CleHada"
+      "name": "Clefairy"
     }]
   }, {
     "id": 37,
