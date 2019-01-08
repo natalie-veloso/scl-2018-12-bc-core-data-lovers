@@ -1,9 +1,10 @@
-const data = POKEMON.pokemon;
+// import POKEMON from './data/pokemon/pokemon.js'
 
 window.poke = {
 
   
 processData: (textSearch) => {
+const data = POKEMON.pokemon;
 
 let nombres = []; // arreglo vacío donde pushearé los nombres nuevos.
 for (let i = 0; i < data.length; i++) {
@@ -19,6 +20,7 @@ for (let i = 0; i < data.length; i++) {
   },
 
   filterData:(data, selectedchoose) => {
+
 
     let typePoke = data.filter(elemento => {
       if (elemento.type[0]  === selectedchoose){
@@ -45,6 +47,7 @@ for (let i = 0; i < data.length; i++) {
 
 
   sortData:(data, sortOrder) => {
+
   data.sort(function(a, b) {
     if( sortOrder === "a-z"){
      
@@ -117,6 +120,7 @@ for (let i = 0; i < data.length; i++) {
 
 
   completeData:() => {
+    const data = POKEMON.pokemon;
  
     let nameComplete = []; // arreglo vacío donde pushearé los nombres nuevos.
     for (let i = 0; i < data.length; i++) {
@@ -128,6 +132,7 @@ for (let i = 0; i < data.length; i++) {
   },
 
   showDatafilter:() => {
+    const data = POKEMON.pokemon;
 
     let imgData = []; // arreglo vacío donde pushearé los nombres nuevos.
     for (let i = 0; i < data.length; i++) {

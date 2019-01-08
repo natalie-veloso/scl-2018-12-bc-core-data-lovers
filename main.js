@@ -1,4 +1,5 @@
-
+// import POKEMON from './data/pokemon/pokemon.js'
+const data = POKEMON.pokemon;
 // Buscar con click del botón y Mostrar
 document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();    // Funcion al clickear boton
@@ -16,7 +17,7 @@ element.scrollIntoView();
 element.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start' });
 
 document.getElementById("search").value = "";// limpia el input
-});
+ });
 
 
 
