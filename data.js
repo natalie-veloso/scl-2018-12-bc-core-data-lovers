@@ -20,11 +20,21 @@ for (let i = 0; i < data.length; i++) {
 
   filterData:(data, selectedchoose) => {
 
-    let typePoke = data.filter(elemento => elemento.type[0] === selectedchoose)
-    .map(function(elemento){
-      return elemento.img;
-     });
-           return typePoke;
+    let typePoke = data.filter(elemento => {
+      if (elemento.type[0]  === selectedchoose){
+        return elemento;
+      }
+      else if  (elemento.type[1]  === selectedchoose){
+        return elemento;
+      }
+       else if (elemento.type[2]  === selectedchoose){
+        return elemento;
+      }
+      
+
+
+    })
+    return typePoke;
 
           
             
@@ -34,19 +44,45 @@ for (let i = 0; i < data.length; i++) {
 },
 
 
-  sortData:() => {
+  sortData:(data, sortOrder) => {
   data.sort(function(a, b) {
-     let nameA = a.name.toUpperCase(); // ignore upper and lowercase
-      let nameB = b.name.toUpperCase(); // ignore upper and lowercase
-      if (nameA < nameB ) {
+    if( sortOrder === "a-z"){
+     
+      if (a.name < b.name ) {
         return -1;
       }
-      if (nameA > nameB) {
+      if (a.name > b.name) {
         return 1;
       }
     
       // names must be equal
       return 0;
+    }
+    else if( sortOrder === "z-a"){
+     
+      if (a.name > b.name) {
+        return -1;
+      }
+      if (a.name < b.name) {
+        return 1;
+      }
+    
+      // names must be equal
+      return 0;
+    }
+
+    else if( sortOrder === "1-151"){
+     
+      if (a.id < b.id ) {
+        return -1;
+      }
+      if (a.id > b.id) {
+        return 1;
+      }
+    
+      // names must be equal
+      return 0;
+    }
     });
      return data;
     
@@ -104,10 +140,3 @@ for (let i = 0; i < data.length; i++) {
 };
 
 
-//     function filterData(data, condition)  {
-
-//       const tiposDePokemon = data.filter(tipos =>{
-//       return tipos.type.indexOf(condition) !== -1;
-//        })
-//        return tiposDePokemon;
-//       }
