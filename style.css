@@ -5,11 +5,21 @@ body{
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   }
 
-  .seccionuno {
- 
-    background: black url(img/header.jpg) center / cover;
+.nav-wrapper{
+  background: rgba(34, 201, 224, 0.76);
   
+}
 
+  .sectionone {
+ 
+    background: url(img/Fondo.png) center / cover;
+    height: 100vh;
+  
+}
+
+.margin-content{
+
+  margin-top: 20px;
 }
 
 .imgProfile{
@@ -66,8 +76,7 @@ a[ id= "contacto" ]:target ~ #main article.panel {
 
 
 @media (max-width: 1024px) {
- .hero { background: black url(img/header.jpg) center / cover; }
  }
 
 @media (max-width:  768px) { 
-.hero { background: black url(img/header.jpg) center / cover; } }
+}
