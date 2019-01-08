@@ -4,89 +4,77 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokemon School</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
    
   </head>
   <body>
- <div class="hero is-fullheight seccionuno">
 
-  <!-- Hero head: will stick at the top -->
-          <header class="hero-head">
-              <nav class="navbar">
-                <div class="container">
-                  <div class="navbar-brand">
-                    <a class="navbar-item">
-                     <h1 class="title is-3 has-text-white">PokeSchool</h1>
-                    </a>
-                    <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                      <span>j</span>
-                      <span>j</span>
-                      <span>j</span>
-                    </span>
-                  </div>
-                </div>
-              </nav>
-            </header>
-
-<!-- Hero content: will be in the middle -->
-          <section class="hero-body">
-              <div class="container has-text-centered">
-
-               
-                <h1 class="title has-text-white">
-                 ¡Bienvenidos a Pokemon School!
-                 </h1>
-                 <h2 class="subtitle has-text-white">
-                    Aquí podrás obtener toda la información que necesites para comenzar con Pokémon Go
-                     y ser el mejor, ¡mejor que nadie más! capturando pokémon de la región de Kanto.
-                </h2>
-                 <!-- Search form -->
-                    <div class="searching">
-                  <input type="text"  name="name" list="names"  id="search"  class="input is-success input-size" placeholder="Buscar Pokemon">
-                      <a id="btnSearch" type="submit" class="button is-primary searchButton">
-                        <span class="icon"><i class="fas fa-search"></i></span>
-                       </a>
-                       <div class="scrollable"><datalist id="names" ></datalist></div>
-                      </div>
-                
-             </div>
-            </section>
+          <!--Logo y Menú-->
+      <header>        
+          <nav> <!--barra de navegación-->
+            <div class="nav-wrapper">
+              <a href="#" class="brand.logo">PokeSchool</a> <!--aquí irá el logo-->
+              <ul id="nav-mobile" class="right side-nav"><!--Crear lista menú-->
+              <li><a href="#">Tipos de Pokémon</a></li>
+              <li><a href="#"></a>Datos Curiosos</li>
+            </ul>
             </div>
+          </nav>
+      </header>  
+
+<!-- Sección Bienvenida y Buscador -->
+      <section class="container-full sectionone">
+        <div class="container">
+        <div class="row">
+              <div class="col s4"></div>
+              <div class="col s4 z-depth-3 section white-text">
+               
+                <h3 class="title">Bienvenido a PokeSchool</h3>
+                <p class="information">Aquí podrás obtener información que te ayudará a capturar pokémon de la región de Kanto en el popular juego Pokémon Go y así ser el mejor, ¡mejor que nadie más! 
+                    ¡Atrápalos ya!</p>
+                    <div class="searching">
+                      <input type="text"  name="name" list="names"  id="search"  class="input is-success input-size" placeholder="Buscar Pokemon">
+                          <a id="btnSearch" type="submit" class="button is-primary searchButton">
+                            <span class="icon"><i class="fas fa-search"></i></span>
+                           </a>
+                    </div>
+              </div>
+              <div class="col s4"></div>
+        </div>
+      </div>
+      </section>
+
+                 <!-- Search form No tocar-->
+                    
+                      
+      
+
+           
           
           
   
    <!-- Pokemon Profile section -->
-      <section id="pokeProfile" class="hero is-fullheight secciondos">
-          <div class="hero-body">
-              <div class="container has-text-centered">
-                  <div class="columns">
-                      <div class="column">
-                        
-                          <div id="root" >
+      <section id="pokeProfile" >
+                       
+                        <!-- No tocar root -->
+                          <div id="root" > 
                               <h3>¿Quien es ese Pokemon?</h3>
-                              <img src="">
                           </div>
-                       </div>
-                  </div>
-               </div>
-          </div>
       </section>
     
 
         <!-- Pokemon filter section -->
-        <section id="pokefilter" class="hero is-fullheight secciontres">
-            <div class="hero-body">
-                <div class="container">
-                    <div class="columns">
+        <section id="pokefilter" >
+
                       <!-- Aside buscador ordenar y tipos -->
-                        <aside class="column is-3">
+                        <aside >
                           <!-- Pokemon filter for type section -->
-                            <div class="field">
-                                <div class="control">
-                                  <div class="select is-success">
+                          
+                              
+                                    <!-- Select No Tocar -->
                                     <select id="typePokemon">
                                       <option value="">Tipos de Pokemon</option>
                                       <option value="Fuego">Fuego</option>
@@ -107,31 +95,25 @@
                                       <option value="Normal">Normal</option>
                                       <option value="Volador">Volador</option>
                                     </select>
-                                  </div>
-                                </div>
-                              </div>
+                                
                               <!-- Pokemon Ordenar section -->
-                              <div class="field">
-                                  <div class="control">
-                                    <div class="select is-primary">
+                            
+                                      <!-- Select No tocar -->
                                       <select id="orderPokemon">
                                         <option>ordenar</option>
                                          <option value="A-Z">A-Z         </option>
                                          <option value="1-151">Pokedex   </option>
                                       </select>
-                                    </div>
-                                  </div>
-                                </div>
+                                   
                         </aside>
                         <!-- Mostrar Pokemon filter for type section -->
-                    <div class="column">
+          
+                      <!-- No Tocar -->
                         <div class="showFilterPokemon"id="allPokemons"> </div>
-                     </div>
-                 </div>
-            </div>
+            
         </section>
   
-     <!-- Data JavaScript -->
+     <!-- Data JavaScript No Tocar -->
      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
