@@ -1,7 +1,11 @@
-global.window=global
-global.chai=require("chai");
-require('../src/data.js');
-require('../src/data/pokemon/pokemon.js')
+// global.window = global
+// global.chai=require("chai");
+// const require('../src/data.js');
+// require('../src/data/pokemon/pokemon.js');
+
+//import processData from '../src/data.js';
+require('../src/data/pokemon/pokemon.js');
+const dataTest = window.POKEMON.pokemon;
 
 const assert = require("assert"); 
 describe('poke', () => {
@@ -36,18 +40,4 @@ describe('poke.completeData', () => {
   });
 });
 
-
-
-
-// describe('pokego.filterData', () => {
-//   it('debería ser una función', () => {
-//     assert.equal(typeof window.pokego2.filterData, 'function');
-//   })
-
-//   it('debería retornar "Dewgong", "Cloyster", "Jynx", "Lapras", "Articuno" para "type" de "Ice"', () => {
-//     assert.equal(window.pokego2.filterData("type", "Ice"), ["Dewgong", "Cloyster", "Jynx", "Lapras", "Articuno"])
-//   })
-
-
-
-
+dataTest();

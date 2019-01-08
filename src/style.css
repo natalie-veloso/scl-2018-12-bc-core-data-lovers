@@ -22,10 +22,10 @@ body{
   margin: 10px;
 }
 
-.scrollable {
+/* .scrollable {
   overflow: scroll; width: 100%; height:300px;
   position: absolute;
-}
+} */
 
 .secciondos{
   background:linear-gradient(150deg,#31709d -10%,#bdd3c4 110%);
@@ -35,6 +35,17 @@ body{
   width: 50%!important;
 
 }
+
+
+
+.align-seccion{
+
+ vertical-align: middle;
+ 
+ }
+
+
+
 #allPokemons{
 display: flex;
 height: 400px;
@@ -50,7 +61,7 @@ flex-wrap: wrap;
  *Scrolling
  */
 
- a[ id= "root" ]:target ~ #pokeProfile div.panel {
+ /* a[ id= "root" ]:target ~ #pokeProfile div.panel {
   -webkit-transform: translateY( 0px);
   transform: translateY( 0px );
 }
@@ -62,7 +73,7 @@ a[ id= "galeria" ]:target ~ #main article.panel {
 a[ id= "contacto" ]:target ~ #main article.panel {
   -webkit-transform: translateY( -200% );
   transform: translateY( -200% );
-}
+} */
 
 
 @media (max-width: 1024px) {
