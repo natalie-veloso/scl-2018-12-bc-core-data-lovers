@@ -77,3 +77,8 @@ a[ id= "contacto" ]:target ~ #main article.panel {
 -webkit-transform: translateY( -200% );
 transform: translateY( -200% );
 } */
+
+
+.is-horizontal-center {
+    justify-content: center;
+  }
