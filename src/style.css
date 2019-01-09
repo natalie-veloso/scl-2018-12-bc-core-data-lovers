@@ -1,84 +1,74 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
-body{
-
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  }
-
-  .seccionuno {
- 
-    background: black url(img/header.jpg) center / cover;
-  
-
+section{
+background: black url(img/Fondo.png) center / cover;
 }
 
+.logo{
+height: 80px;
+}
+
+.colorMenu{
+    background: rgba(34, 201, 224, 0.76); 
+}
+
+body{  font-family: 'Lato', sans-serif;
+}  
+
+.gradiantContainer{
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+border-radius: 15px;
+padding: 20px;
+}
+
+h1, p{
+    text-align: center;
+    margin: 20px;
+}
+
+.searching{
+    text-align: center;
+}
+
+.icono{
+    margin: 50px;
+    text-align: center;
+}
 .imgProfile{
-  width: 200px;
-  margin-bottom: 30px;
+width: 200px;
+margin-bottom: 30px;
 }
 
 .imgfilter{
-  width: 80px;
-  margin: 10px;
-}
-
-/* .scrollable {
-  overflow: scroll; width: 100%; height:300px;
-  position: absolute;
+width: 80px;
+margin: 10px;
+}/* .scrollable {
+overflow: scroll; width: 100%; height:300px;
+position: absolute;
 } */
 
-.secciondos{
-  background:linear-gradient(150deg,#31709d -10%,#bdd3c4 110%);
-}
-
 .input-size{
-  width: 50%!important;
-
+width: 80%!important;
 }
 
-
-
-.align-seccion{
-
- vertical-align: middle;
- 
- }
-
-
-
-#allPokemons{
+.align-seccion{ vertical-align: middle; }#allPokemons{
 display: flex;
 height: 400px;
 overflow-y: scroll;
 }
 
-
 .showFilterPokemon{
 flex-wrap: wrap;
-}
-
-/*
- *Scrolling
- */
-
- /* a[ id= "root" ]:target ~ #pokeProfile div.panel {
-  -webkit-transform: translateY( 0px);
-  transform: translateY( 0px );
-}
-
-a[ id= "galeria" ]:target ~ #main article.panel {
-  -webkit-transform: translateY( -100% );
-  transform: translateY( -100% );
+}/*
+*Scrolling
+*/ /* a[ id= "root" ]:target ~ #pokeProfile div.panel {
+-webkit-transform: translateY( 0px);
+transform: translateY( 0px );
+}a[ id= "galeria" ]:target ~ #main article.panel {
+-webkit-transform: translateY( -100% );
+transform: translateY( -100% );
 }
 a[ id= "contacto" ]:target ~ #main article.panel {
-  -webkit-transform: translateY( -200% );
-  transform: translateY( -200% );
+-webkit-transform: translateY( -200% );
+transform: translateY( -200% );
 } */
-
-
-@media (max-width: 1024px) {
- .hero { background: black url(img/header.jpg) center / cover; }
- }
-
-@media (max-width:  768px) { 
-.hero { background: black url(img/header.jpg) center / cover; } }
