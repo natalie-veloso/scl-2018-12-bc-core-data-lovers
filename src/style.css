@@ -30,6 +30,11 @@ h1, p{
     text-align: center;
 }
 
+.is-horizontal-center{
+    justify-content: center;
+   
+}
+
 .icono{
     margin: 50px;
     text-align: center;
