@@ -7,7 +7,35 @@ let textSearch = document.getElementById('search').value;  // variable de input 
 let resultado = window.poke.processData(textSearch);  // llamando el resultado desde Data.js
 
 document.getElementById('root').innerHTML += 
-`<div class ="pokemonProfile"><h3 class="title is-3">${resultado[0]}</h3><img class="imgProfile" src="${resultado[1]}"><p class="subtitle">${resultado[2]}</p><p class="subtitle">${resultado[3]}</p></div>`   // mostrando el rsultado en array para diferentes keys del objeto.
+`<div class="container">
+<div class="columns">
+  <div class="column"></div>
+  <div class="column">
+<div class="card gradiantContainer">
+<div class="card-content">
+  <div class="media-content">
+      <p class="title is-4">${resultado[0]}</p>
+  </div>
+</div>
+<div class="card-content is-flex is-horizontal-center">
+  <figure class="image is-128x128">
+      <img src="${resultado[1]}">
+  </figure>
+  </div>
+  
+  <div class="card-content">
+  <div class="content">
+      <p>Tipos de Pokemon = ${resultado[2]}</p>
+      <p>Debilidades = ${resultado[3]}</p>
+ </div>
+  </div>
+  
+</div>
+</div>
+<div class="column"></div>
+
+</div>
+</div>`   // mostrando el rsultado en array para diferentes keys del objeto.
 
 // scroll para que al apretar boton buscar me posicione en la pantalla de perfil
 let element = document.getElementById("root");
