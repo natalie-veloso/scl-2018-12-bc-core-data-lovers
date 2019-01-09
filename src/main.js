@@ -1,5 +1,3 @@
-// import POKEMON from './data/pokemon/pokemon.js'
-
 // Buscar con click del botón y Mostrar
 document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();    // Funcion al clickear boton

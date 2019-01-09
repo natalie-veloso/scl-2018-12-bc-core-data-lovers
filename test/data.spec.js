@@ -5,7 +5,7 @@ global.expect=require("chai").assert;
 require('../src/data/pokemon/pokemon.js')
 require('../src/data.js');
 
-const dataTest = window.POKEMON.pokemon;
+const data = window.POKEMON.pokemon;
 
 const assert = require("assert"); 
 
@@ -36,7 +36,7 @@ describe('filterData', () => {
 
 
   it('Debería retornar el primer pokemon de tipo planta', () => {
-    let pokeGrass= window.poke.filterData(dataTest,'Planta')[0].type
+    let pokeGrass= window.poke.filterData(data,'Planta')[0].type
     
     assert.equal(pokeGrass, 'Bulbasaur')
      ;});
