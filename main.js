@@ -1,4 +1,5 @@
-
+// import POKEMON from './data/pokemon/pokemon.js'
+const data = POKEMON.pokemon;
 // Buscar con click del botón y Mostrar
 document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();    // Funcion al clickear boton
@@ -8,8 +9,7 @@ let textSearch = document.getElementById('search').value;  // variable de input 
 let resultado = window.poke.processData(textSearch);  // llamando el resultado desde Data.js
 
 document.getElementById('root').innerHTML += 
-'<div class ="pokemonProfile">' + '<h3 class="title is-3">' + resultado[0] + '</h3>' + '<img class="imgProfile" src="'+resultado[1]+'">' + '<p class="subtitle">' + resultado[2] + '</p>' + '<p class="subtitle">' + resultado[3] + '</p>' + '</div>';   // mostrando el rsultado en array para diferentes keys del objeto.
-
+`<div class ="pokemonProfile"><h3 class="title is-3">${resultado[0]}</h3><img class="imgProfile" src="${resultado[1]}"><p class="subtitle">${resultado[2]}</p><p class="subtitle">${resultado[3]}</p></div>`   // mostrando el rsultado en array para diferentes keys del objeto.
 
 // scroll para que al apretar boton buscar me posicione en la pantalla de perfil
 let element = document.getElementById("root");
@@ -17,7 +17,7 @@ element.scrollIntoView();
 element.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start' });
 
 document.getElementById("search").value = "";// limpia el input
-});
+ });
 
 
 
@@ -49,7 +49,7 @@ document.getElementById('search').addEventListener('keyup', function () {
 
     
 
- // filtrar y ordenar
+ // mostrar todos los pokemones en div
 let resultadoAllPokemons = window.poke.showDatafilter(); 
 document.getElementById('allPokemons').innerHTML = ''; // limpio el div cada vez que se hace click
  for (let i = 0; i < resultadoAllPokemons.length; i++) {
@@ -57,48 +57,28 @@ document.getElementById('allPokemons').innerHTML = ''; // limpio el div cada vez
   }
 
 
-//  ordenar de la A-Z
-let resultsort = window.poke.sortData(); 
-document.getElementById("orderPokemon").addEventListener("change", () => {
-document.getElementById('allPokemons').innerHTML  = '';
+//  ordenar de la A-Z ,Z-A Y 1-151
 
- if (document.getElementById("orderPokemon").value === "A-Z") {
-    for (let i = 0; i < resultsort.length; i++){
-        document.getElementById('allPokemons').innerHTML += '<span><a href=""><img class="imgfilter" src="' + resultsort[i].img + ' "></a></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-   }
-}
-   else if(document.getElementById("orderPokemon").value === "1-151") {
-    for (let i = 0; i < resultadoAllPokemons.length; i++) {
-        document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultadoAllPokemons[i] + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-      }
-    
-   }  
+document.getElementById("orderPokemon").addEventListener("change", sort => {
+document.getElementById('allPokemons').innerHTML  = '';
+let sortOrder = sort.target.value;
+let resultsort = window.poke.sortData(data,sortOrder); 
+
+resultsort.forEach(elementos => {
+    document.getElementById('allPokemons').innerHTML += 
+    `<span><h4>${elementos.name}</h4><a href=""><img class="imgfilter" src="${elementos.img}"></a></span>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+})
 
 });
 
 //  Filtrar por tipo
-
 document.getElementById("typePokemon").addEventListener("change", choose => {
     let selectedchoose = choose.target.value;
     let resultfilter = window.poke.filterData(data, selectedchoose); 
     document.getElementById('allPokemons').innerHTML  = '';
 
-           for (let i = 0; i < resultfilter.length; i++){
-            document.getElementById('allPokemons').innerHTML += '<span><a href=""><img class="imgfilter" src="' + resultfilter[i] + ' "></a></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-       }
-
-   
-   
+    resultfilter.forEach(elemento => {
+            document.getElementById('allPokemons').innerHTML += 
+            `<span><h4>${elemento.name}</h4><a href=""><img class="imgfilter" src="${elemento.img}"></a></span>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+       })
 });
-
-
-
-// document.querySelector("#typePokemon").addEventListener("change", e => {
-//   let val = e.target.value; //get the value from the form
-//   console.log(val);
-//   let searched = POKEMON.pokemon.filter(d => d.type[0] === val).map(function(d){
-//     return d.img;
-//    });
-  
-//   console.log(searched);
-// });
