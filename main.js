@@ -1,5 +1,5 @@
 // import POKEMON from './data/pokemon/pokemon.js'
-const data = POKEMON.pokemon;
+
 // Buscar con click del botón y Mostrar
 document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();    // Funcion al clickear boton
@@ -17,7 +17,7 @@ element.scrollIntoView();
 element.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'start' });
 
 document.getElementById("search").value = "";// limpia el input
- });
+});
 
 
 
@@ -61,8 +61,10 @@ document.getElementById('allPokemons').innerHTML = ''; // limpio el div cada vez
 
 document.getElementById("orderPokemon").addEventListener("change", sort => {
 document.getElementById('allPokemons').innerHTML  = '';
+
 let sortOrder = sort.target.value;
-let resultsort = window.poke.sortData(data,sortOrder); 
+let resultsort = window.poke.sortData(sortOrder); 
+
 
 resultsort.forEach(elementos => {
     document.getElementById('allPokemons').innerHTML += 
@@ -74,7 +76,9 @@ resultsort.forEach(elementos => {
 //  Filtrar por tipo
 document.getElementById("typePokemon").addEventListener("change", choose => {
     let selectedchoose = choose.target.value;
-    let resultfilter = window.poke.filterData(data, selectedchoose); 
+
+    let resultfilter = window.poke.filterData(selectedchoose); 
+   
     document.getElementById('allPokemons').innerHTML  = '';
 
     resultfilter.forEach(elemento => {
