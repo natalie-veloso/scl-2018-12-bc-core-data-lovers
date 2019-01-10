@@ -12,19 +12,16 @@ document.getElementById('root').innerHTML +=
   <div class="column"></div>
   <div class="column">
 <div class="card gradiantContainer">
-<div class="backgroundColor">
 <div class="card-content">
   <div class="media-content">
-      <p class="title is-4 has-text-white">${resultado[0]}</p>
+      <p class="title is-4">${resultado[0]}</p>
   </div>
-</div>
 </div>
 <div class="card-content is-flex is-horizontal-center">
   <figure class="image is-128x128">
-      <img class="backgroundImage is-rounded" src="${resultado[1]}">
+      <img src="${resultado[1]}">
   </figure>
   </div>
-
   <div class="card-content is-horizontal-center">
   <div class="control">
     <div class="tags has-addons">
@@ -52,6 +49,14 @@ document.getElementById('root').innerHTML +=
     </div>
     <a class="button is-info">EVOLUCIONAR</a>
   </div>
+
+  
+  <div class="card-content">
+  <div class="content">
+      <p>Tipos de Pokemon = ${resultado[2]}</p>
+      <p>Debilidades = ${resultado[3]}</p>
+ </div>
+
   </div>
   
 </div>
@@ -59,7 +64,6 @@ document.getElementById('root').innerHTML +=
 <div class="column"></div>
 
 </div>
-
 </div>`   // mostrando el rsultado en array para diferentes keys del objeto.
 
 // scroll para que al apretar boton buscar me posicione en la pantalla de perfil
@@ -135,7 +139,10 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
     resultfilter.forEach(elemento => {
             document.getElementById('allPokemons').innerHTML += 
             `<span><h4>${elemento.name}</h4><a href=""><img class="imgfilter" src="${elemento.img}"></a></span>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-       })
+      
+        })
+
+   
 });
 
 
@@ -145,7 +152,8 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
 
 
 //  Promediar datos
-
+let resultCompute = window.poke.computeStats();
+resultCompute();
 
 
 // Navbar Burger
@@ -175,3 +183,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
