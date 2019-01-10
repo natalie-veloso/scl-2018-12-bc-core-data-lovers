@@ -21,6 +21,7 @@ body {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
     border-radius: 15px;
     padding: 0px;
+    
 }
 
 .backgroundColor {
@@ -39,7 +40,7 @@ body {
     font-weight: 700;
 }
 
-h1, p {
+h1, p{
     text-align: center;
     margin: 20px;
 }
@@ -84,4 +85,40 @@ position: absolute;
 .showFilterPokemon {
     flex-wrap: wrap;
 }
+
+
+.tags{
+    justify-content: center;
+}
+
+footer{
+    background-color: #2285E0!important;
+    padding: 2%;
+}
+
+@media screen and (max-width: 1087px){
+    .navbar-menu{
+        background-color: #11d2b3!important; 
+    }
+
+    .navbar-item{
+        color: #ffffff;
+    }
+}
+
+/*
+*Scrolling
+*/
+
+/* a[ id= "root" ]:target ~ #pokeProfile div.panel {
+-webkit-transform: translateY( 0px);
+transform: translateY( 0px );
+}a[ id= "galeria" ]:target ~ #main article.panel {
+-webkit-transform: translateY( -100% );
+transform: translateY( -100% );
+}
+a[ id= "contacto" ]:target ~ #main article.panel {
+-webkit-transform: translateY( -200% );
+transform: translateY( -200% );
+} */
 
