@@ -101,30 +101,95 @@ window.poke = {
   
   
     computeStats:() => {
-
-     
-        const filteredata = data.filter(element => {
-          return element.type
-        })
-       
-        return filteredata;
-
-     
       
-  
-  
-  // var sumatoriaObjeto = arreglo.reduce(function(acumulador, siguienteValor){
-  //   return {
-  //     edad: acumulador.edad + siguienteValor.edad
-  //   };
-  // }, {edad: 0}); //Si no hay nada, regresamos un objeto con edad = 0. No hay necesidad de devolver el nombre, pues no es necesario
+
+          const firepokemon = data.filter((element )=> {return element.type.indexOf('Fuego') >= 0 });
+          let fire = firepokemon.length;
+       
+
+          const grasspokemon = data.filter((element )=> {return element.type.indexOf('Planta') >= 0 });
+            let grass = grasspokemon.length;
+          
+
+            const icepokemon = data.filter((element )=> {return element.type.indexOf('Hielo') >= 0 });
+             let ice = icepokemon.length;
+
+             const electricpokemon = data.filter((element )=> {return element.type.indexOf('Eléctrico') >= 0 });
+             let electric = electricpokemon.length;
+
+             const psiquicopokemon = data.filter((element )=> {return element.type.indexOf('Psíquico') >= 0 });
+             let psiquico = psiquicopokemon.length;
+
+             const normalpokemon = data.filter((element )=> {return element.type.indexOf('Normal') >= 0 });
+             let normal = normalpokemon.length;
+             
+             const earthpokemon = data.filter((element )=> {return element.type.indexOf('Tierra') >= 0 });
+             let earth = earthpokemon.length;
+
+             const ghostpokemon = data.filter((element )=> {return element.type.indexOf('Fantasma') >= 0 });
+             let ghost = ghostpokemon.length;
+
+
+             const fightpokemon = data.filter((element )=> {return element.type.indexOf('Lucha') >= 0 });
+             let fight = fightpokemon.length;
+
+             const poisonpokemon = data.filter((element )=> {return element.type.indexOf('Veneno') >= 0 });
+             let poison = poisonpokemon.length;
+        
+
+             const rockpokemon = data.filter((element )=> {return element.type.indexOf('Roca') >= 0 });
+             let rock= rockpokemon.length;
+
+             const waterpokemon = data.filter((element )=> {return element.type.indexOf('Agua') >= 0 });
+             let water= waterpokemon.length;
+             const flyingpokemon = data.filter((element )=> {return element.type.indexOf('Volador') >= 0 });
+             let flying= flyingpokemon.length;
+
+
+          // let count = firepokemon.reduce((acum, element) => {return acum + element.type}, '');
+
+         //  Promediar datos
+         google.charts.load("current", {packages:["corechart"]});
+         google.charts.setOnLoadCallback(drawChart);
+         function drawChart() {
+           let data = google.visualization.arrayToDataTable([
+             ['Task', 'Tipos de Pokemon'],
+             ['Planta', grass],
+             ['Fuego',  fire],
+             ['Electrico', electric],
+             ['Psíquico', psiquico],
+             ['Hielo', ice],
+             ['Normal', normal],
+             ['Tierra', earth],
+             ['Fantasma', ghost],
+             ['Lucha', fight],
+             ['Veneno', poison],
+             ['Bicho', earth],
+             ['Roca', rock],
+             ['Dragón', earth],
+             ['Volador', flying],
+             ['Agua', water]
+           ]);
    
-  // var promedioEdad = sumatoriaObjeto.edad / arreglo.length;
-  
-      // la función compute o calcular, nos permitirá hacer 
-      // cálculos estadísticos básicos para ser mostrados de 
-      // acuerdo a la data proporcionada.
-  
+           let options = {
+             title: 'Porcentajes de Pokemon en la Región Kanto',
+             pieHole: 0.5,
+             'width':500 ,
+              'height':500,
+             backgroundColor: 'transparent'
+           };
+   
+           let chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+           chart.draw(data, options);
+
+         }
+   
+
+
+     
+          
+
+        
     },
   
   

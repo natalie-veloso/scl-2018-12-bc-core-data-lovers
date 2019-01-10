@@ -12,7 +12,7 @@ document.getElementById('root').innerHTML +=
   <div class="column"></div>
   <div class="column">
 <div class="card gradiantContainer">
-<div class="backgroundColor">
+<div class ="backgroundColor">
 <div class="card-content">
   <div class="media-content">
       <p class="title is-4 has-text-white">${resultado[0]}</p>
@@ -24,7 +24,6 @@ document.getElementById('root').innerHTML +=
       <img class="backgroundImage is-rounded" src="${resultado[1]}">
   </figure>
   </div>
-
   <div class="card-content is-horizontal-center">
   <div class="control">
     <div class="tags has-addons">
@@ -53,13 +52,12 @@ document.getElementById('root').innerHTML +=
     <a class="button is-info">EVOLUCIONAR</a>
   </div>
   </div>
-  
-</div>
-</div>
+  </div>
+  </div>
+
 <div class="column"></div>
 
 </div>
-
 </div>`   // mostrando el rsultado en array para diferentes keys del objeto.
 
 // scroll para que al apretar boton buscar me posicione en la pantalla de perfil
@@ -135,18 +133,11 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
     resultfilter.forEach(elemento => {
             document.getElementById('allPokemons').innerHTML += 
             `<span><h4>${elemento.name}</h4><a href=""><img class="imgfilter" src="${elemento.img}"></a></span>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-       })
+      
+        })
+
+   
 });
-
-
-
-
-
-
-
-//  Promediar datos
-
-
 
 // Navbar Burger 
 
@@ -175,3 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+//  Promediar datos
+let resultCompute = window.poke.computeStats();
+resultCompute();
+
