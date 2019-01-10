@@ -122,10 +122,8 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
 //  Promediar datos
 
 let resultCompute = window.poke.computeStats(); 
-resultCompute.forEach(elemento => {
-    const resultFire = elemento.type.filter(x => x === "Planta").length; 
-console.log(resultFire );
-})
+console.log(resultCompute);
+
 google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
