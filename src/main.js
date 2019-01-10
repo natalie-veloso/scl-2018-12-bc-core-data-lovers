@@ -12,33 +12,21 @@ document.getElementById('root').innerHTML +=
   <div class="column"></div>
   <div class="column">
 <div class="card gradiantContainer">
-<div class="backgroundColor">
 <div class="card-content">
   <div class="media-content">
-      <p class="title is-4 has-text-white">${resultado[0]}</p>
+      <p class="title is-4">${resultado[0]}</p>
   </div>
-</div>
 </div>
 <div class="card-content is-flex is-horizontal-center">
   <figure class="image is-128x128">
-      <img class="backgroundImage is-rounded" src="${resultado[1]}">
+      <img src="${resultado[1]}">
   </figure>
   </div>
   
   <div class="card-content">
-  <div class="content has-text-white">
-    <div class="columns">
-        <div class="column tipographyWeight is-6">
-      <p>Caramelos</p>
-      <p>Huevo</p>
-      <p>Debilidades</p>
-        </div>
-        <div class="column is-6">
-      <p> ${resultado[2]}</p>
-      <p> ${resultado[2]}</p>
-      <p> ${resultado[2]}</p>
-        </div>
-    </div>
+  <div class="content">
+      <p>Tipos de Pokemon = ${resultado[2]}</p>
+      <p>Debilidades = ${resultado[3]}</p>
  </div>
   </div>
   
@@ -47,7 +35,6 @@ document.getElementById('root').innerHTML +=
 <div class="column"></div>
 
 </div>
-<a class="button is-info">EVOLUCIONAR</a>
 </div>`   // mostrando el rsultado en array para diferentes keys del objeto.
 
 // scroll para que al apretar boton buscar me posicione en la pantalla de perfil
@@ -123,7 +110,10 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
     resultfilter.forEach(elemento => {
             document.getElementById('allPokemons').innerHTML += 
             `<span><h4>${elemento.name}</h4><a href=""><img class="imgfilter" src="${elemento.img}"></a></span>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
-       })
+      
+        })
+
+   
 });
 
 
@@ -133,27 +123,6 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
 
 
 //  Promediar datos
+let resultCompute = window.poke.computeStats();
+resultCompute();
 
-let resultCompute = window.poke.computeStats(); 
-console.log(resultCompute);
-
-google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        let datas = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        let options = {
-          title: 'Pokemones de Región Kanto',
-          pieHole: 0.4,
-        };
-
-        let chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(datas, options);
-      }
