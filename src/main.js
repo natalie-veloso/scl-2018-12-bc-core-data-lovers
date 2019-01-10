@@ -125,3 +125,37 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
             `<span><h4>${elemento.name}</h4><a href=""><img class="imgfilter" src="${elemento.img}"></a></span>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
        })
 });
+
+
+
+
+
+
+
+//  Promediar datos
+
+let resultCompute = window.poke.computeStats(); 
+resultCompute.forEach(elemento => {
+    const resultFire = elemento.type.filter(x => x === "Planta").length; 
+console.log(resultFire );
+})
+google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        let datas = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        let options = {
+          title: 'Pokemones de Región Kanto',
+          pieHole: 0.4,
+        };
+
+        let chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(datas, options);
+      }
