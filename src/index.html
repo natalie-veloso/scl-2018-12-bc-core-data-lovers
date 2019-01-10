@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
 
    
 
@@ -45,16 +45,8 @@
       
 
         </header>
-
+<!-- seccion inicial buscador -->
 <section class="hero is-fullheight seccionuno section">
-
-     <!-- Hero head: will stick at the top -->
-
-   
-
-    
-
-<!-- Hero content: will be in the middle -->
 
 <div class="container centered">
   <div class="columns">
@@ -98,7 +90,7 @@
   </section>        
        
   
-   <!-- Pokemon Profile section -->
+<!-- Pokemon Profile section -->
 
       <section id="pokeProfile" class="hero is-fullheight secciondos">
           <div class="hero-body">
@@ -118,7 +110,7 @@
 
     
 
-        <!-- Pokemon filter section -->
+ <!-- Pokemon filter section -->
 
         <section id="pokefilter" class="hero is-fullheight secciontres">
             <div class="hero-body">
@@ -183,15 +175,20 @@
           </div>
         </section>
 
- <!-- promedio por canvas for type section -->
+ <!-- seccion final datos curiosos -->
 
         <section id="pokeCurios" class="hero is-fullheight seccionuno section">
-                     
+            <div class="container">
+                <div class="columns">
+                  <div id="donutchart" ></div>
+                </div>
+              </div>          
           
-            
-        </section>
+       </section>
 
-  
+    <!-- enlace Google Chart -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
      <!-- Data JavaScript -->
 
@@ -199,6 +196,7 @@
     <script type="module" src="./data/pokemon/pokemon.js"></script>
     <script type="module" src="data.js"></script>
     <script type="module" src="main.js"></script>
+  
 
     
 
