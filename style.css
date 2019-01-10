@@ -85,18 +85,3 @@ position: absolute;
     flex-wrap: wrap;
 }
 
-/*
-*Scrolling
-*/
-
-/* a[ id= "root" ]:target ~ #pokeProfile div.panel {
--webkit-transform: translateY( 0px);
-transform: translateY( 0px );
-}a[ id= "galeria" ]:target ~ #main article.panel {
--webkit-transform: translateY( -100% );
-transform: translateY( -100% );
-}
-a[ id= "contacto" ]:target ~ #main article.panel {
--webkit-transform: translateY( -200% );
-transform: translateY( -200% );
-} */
