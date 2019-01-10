@@ -148,7 +148,7 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
 
 
 
-// Navbar Burger
+// Navbar Burger 
 
 document.addEventListener('DOMContentLoaded', () => {
 
