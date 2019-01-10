@@ -1,72 +1,95 @@
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
-
-section{
-background: black url(img/Fondo.png) center / cover;
+section {
+    background: black url(img/Fondo.png) center / cover;
 }
 
-.logo{
-height: 80px;
+.logo {
+    height: 80px;
 }
 
-.colorMenu{
-    background: rgba(34, 201, 224, 0.76); 
+body {
+    font-family: 'Lato', sans-serif;
 }
 
-body{  font-family: 'Lato', sans-serif;
-}  
-
-.gradiantContainer{
-background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
-border-radius: 15px;
-padding: 20px;
+.gradiantContainer1 {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 15px;
+    padding: 20px;
 }
 
-h1, p{
+.gradiantContainer {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 15px;
+    padding: 0px;
+}
+
+.backgroundColor {
+    background: rgba(34, 201, 224, 0.76);
+    padding: 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.backgroundImage {
+    background: rgba(255, 255, 255, 0.39);
+    border: solid rgba(34, 201, 224, 0.76) 5px;
+}
+
+.tipographyWeight {
+    font-weight: 700;
+}
+
+h1, p {
     text-align: center;
     margin: 20px;
 }
 
-.searching{
+.searching {
     text-align: center;
 }
 
-.is-horizontal-center{
+.is-horizontal-center {
     justify-content: center;
-   
 }
 
-.icono{
-    margin: 50px;
-    text-align: center;
-}
-.imgProfile{
-width: 200px;
-margin-bottom: 30px;
+.imgProfile {
+    width: 200px;
+    margin-bottom: 30px;
 }
 
-.imgfilter{
-width: 80px;
-margin: 10px;
-}/* .scrollable {
+.imgfilter {
+    width: 80px;
+    margin: 10px;
+}
+
+/* .scrollable {
 overflow: scroll; width: 100%; height:300px;
 position: absolute;
 } */
 
-.input-size{
-width: 80%!important;
+.input-size {
+    width: 80%!important;
 }
 
-.align-seccion{ vertical-align: middle; }#allPokemons{
-display: flex;
-height: 400px;
-overflow-y: scroll;
+.align-seccion {
+    vertical-align: middle;
 }
 
-.showFilterPokemon{
-flex-wrap: wrap;
-}/*
+#allPokemons {
+    display: flex;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.showFilterPokemon {
+    flex-wrap: wrap;
+}
+
+/*
 *Scrolling
-*/ /* a[ id= "root" ]:target ~ #pokeProfile div.panel {
+*/
+
+/* a[ id= "root" ]:target ~ #pokeProfile div.panel {
 -webkit-transform: translateY( 0px);
 transform: translateY( 0px );
 }a[ id= "galeria" ]:target ~ #main article.panel {
@@ -77,8 +100,3 @@ a[ id= "contacto" ]:target ~ #main article.panel {
 -webkit-transform: translateY( -200% );
 transform: translateY( -200% );
 } */
-
-
-.is-horizontal-center {
-    justify-content: center;
-  }
