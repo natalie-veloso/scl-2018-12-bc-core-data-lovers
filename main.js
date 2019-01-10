@@ -12,14 +12,16 @@ document.getElementById('root').innerHTML +=
   <div class="column"></div>
   <div class="column">
 <div class="card gradiantContainer">
+<div class ="backgroundColor">
 <div class="card-content">
   <div class="media-content">
-      <p class="title is-4">${resultado[0]}</p>
+      <p class="title is-4 has-text-white">${resultado[0]}</p>
   </div>
+</div>
 </div>
 <div class="card-content is-flex is-horizontal-center">
   <figure class="image is-128x128">
-      <img src="${resultado[1]}">
+      <img class="backgroundImage is-rounded" src="${resultado[1]}">
   </figure>
   </div>
   <div class="card-content is-horizontal-center">
@@ -49,18 +51,10 @@ document.getElementById('root').innerHTML +=
     </div>
     <a class="button is-info">EVOLUCIONAR</a>
   </div>
-
-  
-  <div class="card-content">
-  <div class="content">
-      <p>Tipos de Pokemon = ${resultado[2]}</p>
-      <p>Debilidades = ${resultado[3]}</p>
- </div>
-
   </div>
-  
-</div>
-</div>
+  </div>
+  </div>
+
 <div class="column"></div>
 
 </div>
@@ -145,17 +139,6 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
    
 });
 
-
-
-
-
-
-
-//  Promediar datos
-let resultCompute = window.poke.computeStats();
-resultCompute();
-
-
 // Navbar Burger
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -183,4 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
+
+//  Promediar datos
+let resultCompute = window.poke.computeStats();
+resultCompute();
 
