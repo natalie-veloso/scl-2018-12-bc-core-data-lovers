@@ -104,19 +104,12 @@ window.poke = {
 
      
         const filteredata = data.filter(element => {
-          return element.type;
+          return element.type
         })
        
         return filteredata;
 
-      
-      
-      // const makecompute = sweetItem => sweetItem * 2;
-
-      // const pokecompute = data.map(makecompute);
-
-      // console.log(pokecompute)
-
+     
       
   
   
