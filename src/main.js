@@ -24,22 +24,34 @@ document.getElementById('root').innerHTML +=
       <img class="backgroundImage is-rounded" src="${resultado[1]}">
   </figure>
   </div>
-  
-  <div class="card-content">
+
+  <div class="card-content is-horizontal-center">
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-info">Agua</span>
+      <span class="tag is-primary">Tierra</span>
+      <span class="tag is-dark">Veneno</span>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="card-content centered">
   <div class="content has-text-white">
     <div class="columns">
-        <div class="column tipographyWeight is-6">
+        <div class="column tipographyWeight is-one-third">
       <p>Caramelos</p>
       <p>Huevo</p>
       <p>Debilidades</p>
         </div>
-        <div class="column is-6">
+        <div class="column">
       <p> ${resultado[2]}</p>
       <p> ${resultado[2]}</p>
       <p> ${resultado[2]}</p>
         </div>
     </div>
- </div>
+    <a class="button is-info">EVOLUCIONAR</a>
+  </div>
   </div>
   
 </div>
@@ -47,7 +59,7 @@ document.getElementById('root').innerHTML +=
 <div class="column"></div>
 
 </div>
-<a class="button is-info">EVOLUCIONAR</a>
+
 </div>`   // mostrando el rsultado en array para diferentes keys del objeto.
 
 // scroll para que al apretar boton buscar me posicione en la pantalla de perfil
@@ -134,26 +146,32 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
 
 //  Promediar datos
 
-let resultCompute = window.poke.computeStats(); 
-console.log(resultCompute);
 
-google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        let datas = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
 
-        let options = {
-          title: 'Pokemones de Región Kanto',
-          pieHole: 0.4,
-        };
+// Navbar Burger
 
-        let chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(datas, options);
-      }
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
