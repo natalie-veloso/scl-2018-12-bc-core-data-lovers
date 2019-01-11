@@ -1,4 +1,6 @@
 const data = window.POKEMON.pokemon;
+window.google;
+window.data;
 
 
 window.poke = {
@@ -149,14 +151,15 @@ window.poke = {
 
           // let count = firepokemon.reduce((acum, element) => {return acum + element.type}, '');
 
-         //  Promediar datos
+        //  //  Promediar datos
+        
       
-         google.charts.load("current", {packages:["corechart"]});
-         google.charts.setOnLoadCallback(drawChart);
+         window.google.charts.load("current", {packages:["corechart"]});
+         window.google.charts.setOnLoadCallback(drawChart);
 
          
          function drawChart() {
-           let data = google.visualization.arrayToDataTable([
+           let data = window.google.visualization.arrayToDataTable([
              ['Task', 'Tipos de Pokemon'],
              ['Planta', grass],
              ['Fuego',  fire],
@@ -178,22 +181,15 @@ window.poke = {
            let options = {
              title: 'Porcentajes de Pokemon en la Región Kanto',
              pieHole: 0.5,
-             'width':500 ,
-              'height':500,
+             
              backgroundColor: 'transparent'
            };
    
-           let chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+           let chart = new window.google.visualization.PieChart(document.getElementById('donutchart'));
            chart.draw(data, options);
-
+           
          }
-   
 
-
-     
-          
-
-        
     },
   
   
