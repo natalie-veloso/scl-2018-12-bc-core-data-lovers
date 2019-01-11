@@ -28,9 +28,9 @@ document.getElementById('root').innerHTML +=
   <div class="card-content is-horizontal-center">
   <div class="control">
     <div class="tags has-addons">
-      <span class="tag is-info">${resultado[3]}</span>
+     
       <span class="tag is-primary">${resultado[3]}</span>
-      <span class="tag is-dark">${resultado[3]}</span>
+      
     </div>
   </div>
   </div>
@@ -43,14 +43,16 @@ document.getElementById('root').innerHTML +=
       <p>Caramelos</p>
       <p>Huevo</p>
       <p>Debilidades</p>
+      <p>Peso</p>
         </div>
         <div class="column">
       <p> ${resultado[4]}</p>
       <p> ${resultado[5]}</p>
       <p> ${resultado[2]}</p>
+      <p> ${resultado[6]}</p>
         </div>
     </div>
-    <a class="button is-info">EVOLUCIONAR</a>
+  
   </div>
   </div>
   </div>

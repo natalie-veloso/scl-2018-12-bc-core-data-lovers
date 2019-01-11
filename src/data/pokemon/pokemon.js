@@ -5,7 +5,7 @@ const POKEMON = {
     "name": "Bulbasaur",
     "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
     "type": [
-      "Planta",
+      "Planta" ,
       "Veneno"
     ],
     "height": "0.71 m",
@@ -18,9 +18,9 @@ const POKEMON = {
     "spawn_time": "20:00",
     "multipliers": [1.58],
     "weaknesses": [
-      "Fuego",
-      "Hielo",
-      "Volador",
+      "Fuego" ,
+      "Hielo" ,
+      "Volador" ,
       "Psíquico"
     ],
     "next_evolution": [{
@@ -36,7 +36,7 @@ const POKEMON = {
     "name": "Ivysaur",
     "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
     "type": [
-      "Planta",
+      "Planta" ,
       "Veneno"
     ],
     "height": "0.99 m",
@@ -52,9 +52,9 @@ const POKEMON = {
       1.6
     ],
     "weaknesses": [
-      " Fuego ",
-      " Hielo ",
-      " Volador ",
+      " Fuego " ,
+      " Hielo " ,
+      " Volador " ,
       " Psiquico "
     ],
     "prev_evolution": [{
@@ -84,8 +84,8 @@ const POKEMON = {
     "multipliers": null,
     "weaknesses": [
       "Fuego",
-      "Hielo",
-      "Volador",
+      "Hielo" ,
+      "Volador" ,
       "Psíquico"
     ],
     "prev_evolution": [{
@@ -113,8 +113,8 @@ const POKEMON = {
     "spawn_time": "08:45",
     "multipliers": [1.65],
     "weaknesses": [
-      "Agua",
-      "Tierra",
+      "Agua" ,
+      "Tierra" ,
       "Roca"
     ],
     "next_evolution": [{
@@ -142,8 +142,8 @@ const POKEMON = {
     "spawn_time": "19:00",
     "multipliers": [1.79],
     "weaknesses": [
-      "Agua",
-      "Tierra",
+      "Agua" ,
+      "Tierra" ,
       "Roca"
     ],
     "prev_evolution": [{
@@ -160,7 +160,7 @@ const POKEMON = {
     "name": "Charizard",
     "img": "http://www.serebii.net/pokemongo/pokemon/006.png",
     "type": [
-      "Fuego",
+      "Fuego" ,
       "Volador"
     ],
     "height": "1.70 m",

@@ -51,7 +51,7 @@ describe('processData', () => {
 
 
   it('debería retornar "Bulbasaur" para "Bulbasaur"', () => {
-    assert.equal(window.poke.processData (data.type), 'Bulbasaur');
+    assert.deepEqual(window.poke.processData (data.type), 'Bulbasaur');
   });
 });
 
@@ -64,7 +64,7 @@ describe('filterData', () => {
   it('Debería retornar el primer pokemon de tipo planta', () => {
     let pokeGrass= window.poke.filterData('Planta')
     
-    assert.equal(pokeGrass.type, 'Bulbasaur')
+    assert.deepEqual(pokeGrass.type, 'Bulbasaur')
      ;});
 
   });
