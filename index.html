@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 
    
@@ -251,7 +252,7 @@
                     <div class="content has-text-white">
                       <div class="columns">
                         <div class="column">
-                          <h5></h5>
+                          <h5>Kanto (Kanto en inglés, カントー Kantō en japonés) es una región del mundo Pokémon situada al este de Johto y al sur de Sinnoh.  </h5>
                          
                           <div id="donutchart" class="chart" ></div>
                         <div id="curiosNotes"></div>
@@ -328,6 +329,10 @@ let refs = {
     }
   }
 };
+
+$(window).resize(function(){
+ donutchart();
+ });
 </script>
 
 

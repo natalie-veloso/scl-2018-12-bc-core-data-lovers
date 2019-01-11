@@ -152,7 +152,6 @@ window.poke = {
           // let count = firepokemon.reduce((acum, element) => {return acum + element.type}, '');
 
         //  //  Promediar datos
-        
       
          window.google.charts.load("current", {packages:["corechart"]});
          window.google.charts.setOnLoadCallback(drawChart);
@@ -179,7 +178,7 @@ window.poke = {
            ]);
    
            let options = {
-             title: 'Porcentajes de Pokemon en la Región Kanto',
+             title: '',
              pieHole: 0.5,
              
              backgroundColor: 'transparent'
