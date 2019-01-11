@@ -13,7 +13,7 @@ window.poke = {
   for (let i = 0; i < data.length; i++) {
   
     if (data[i].name === textSearch){
-      nombres.push(data[i].name, data[i].img, data[i].weaknesses, data[i].type,data[i].candy,data[i].egg)
+      nombres.push(data[i].name, data[i].img, data[i].weaknesses, data[i].type,data[i].candy,data[i].egg, data[i].weight)
     }
   }
     return nombres;
