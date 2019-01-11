@@ -252,7 +252,8 @@
                       <div class="columns">
                         <div class="column">
                           <h5></h5>
-                          <div id="donutchart" ></div>
+                         
+                          <div id="donutchart" class="chart" ></div>
                         <div id="curiosNotes"></div>
                       </div>
                           
@@ -267,27 +268,72 @@
               
 
             </div>
-       </div>
- 
+       
        </section>
-       <nav class="container"  > 
-  
-      
-          <a class="buttons" tooltip="Share" href="#"></a>
-      
-        </nav>
+       
+
+        <a href="#" onclick="refs.modalEdicion.open()" class="float">
+          <img src="img/iconoayuda.png" alt="ayuda">
+          </a>
+          <div class="label-container">
+          <div class="label-text">¡Hola! Soy Ash</div>
+          <i class="fa fa-play label-arrow"></i>
+          </div>
+
+
 
        <footer>
         <div class="content has-text-centered has-text-white">                       
-              <p>PokeSchool por Gloria Moraga y Natalie Veloso. Todos los derechos reservados.<br/>Santiago de Chile</p>
+              <p><strong class="has-text-white">PokeSchool </strong>  ©  Todos los derechos reservados.<br/> Made with ❤  Gloria Moraga & Natalie Veloso. </p>
         </div>
        </footer>
+
+  
+      <div class="modal" id="modalEdicion">
+          <div onclick="refs.modalEdicion.close()" class="modal-background"></div>
+        
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">
+        Bienvenidos a POKESCHOOL.</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <p class="has-text-white">Hola, Aprendiz de Entrenador!</p>
+      <p class="has-text-white">Pokeschool es tu lugar ideal para aprender de los 151 pokemones de la Region de Kanto,
+        puedes utilizar las diferentes herramientas para conocer acerca de tu Pokemon favoritos.</p>
+
+       <p class="has-text-white"> En el buscador puedes buscar entre los 151 pokemones y revisar sus cracteristicas especiales.</p>
+
+       
+       <p class="has-text-white"> Muy pronto, tendremos la biblioteca de Kanto, las trivias y mucho mas para que llegues a ser el mejor de todos.</p>
+      
+    </section>
+  </div>
+          <button class="modal-close is-large" aria-label="close" onclick="refs.modalEdicion.close()"></button>
+      </div>
+
+
+
+
+     <!-- Data JavaScript -->
+<script>
+
+let refs = {
+  modalEdicion: {
+    open: function() { document.getElementById('modalEdicion').classList.add('is-active');
+    },
+    close:function() { document.getElementById('modalEdicion').classList.remove('is-active');
+                      
+    }
+  }
+};
+</script>
+
+
     <!-- enlace Google Chart -->
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-     <!-- Data JavaScript -->
-
      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script type="module" src="./data/pokemon/pokemon.js"></script>
     <script type="module" src="data.js"></script>
