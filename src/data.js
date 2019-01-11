@@ -1,5 +1,6 @@
 const data = window.POKEMON.pokemon;
 
+
 window.poke = {
 
   
@@ -10,7 +11,7 @@ window.poke = {
   for (let i = 0; i < data.length; i++) {
   
     if (data[i].name === textSearch){
-      nombres.push(data[i].name, data[i].img, data[i].weaknesses, data[i].type)
+      nombres.push(data[i].name, data[i].img, data[i].weaknesses, data[i].type,data[i].candy,data[i].egg)
     }
   }
     return nombres;
@@ -149,8 +150,11 @@ window.poke = {
           // let count = firepokemon.reduce((acum, element) => {return acum + element.type}, '');
 
          //  Promediar datos
+      
          google.charts.load("current", {packages:["corechart"]});
          google.charts.setOnLoadCallback(drawChart);
+
+         
          function drawChart() {
            let data = google.visualization.arrayToDataTable([
              ['Task', 'Tipos de Pokemon'],
