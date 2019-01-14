@@ -1,4 +1,5 @@
-// Buscar con click del botón y Mostrar
+
+window.onload = (() => {// Buscar con click del botón y Mostrar
 document.getElementById('btnSearch').addEventListener('click',
     (evento) => {evento.preventDefault();    // Funcion al clickear boton
 
@@ -27,9 +28,9 @@ document.getElementById('root').innerHTML +=
   <div class="card-content is-horizontal-center">
   <div class="control">
     <div class="tags has-addons">
-      <span class="tag is-info">Agua</span>
-      <span class="tag is-primary">Tierra</span>
-      <span class="tag is-dark">Veneno</span>
+     
+      <span class="tag is-primary">${resultado[3]}</span>
+      
     </div>
   </div>
   </div>
@@ -37,19 +38,21 @@ document.getElementById('root').innerHTML +=
 
   <div class="card-content centered">
   <div class="content has-text-white">
-    <div class="columns">
-        <div class="column tipographyWeight is-one-third">
+    <div class="columns is-mobile">
+        <div class="column  tipographyWeight is-one-third">
       <p>Caramelos</p>
       <p>Huevo</p>
       <p>Debilidades</p>
+      <p>Peso</p>
         </div>
         <div class="column">
+      <p> ${resultado[4]}</p>
+      <p> ${resultado[5]}</p>
       <p> ${resultado[2]}</p>
-      <p> ${resultado[2]}</p>
-      <p> ${resultado[2]}</p>
+      <p> ${resultado[6]}</p>
         </div>
     </div>
-    <a class="button is-info">EVOLUCIONAR</a>
+  
   </div>
   </div>
   </div>
@@ -102,7 +105,17 @@ document.getElementById('search').addEventListener('keyup', function () {
 let resultadoAllPokemons = window.poke.showDatafilter(); 
 document.getElementById('allPokemons').innerHTML = ''; // limpio el div cada vez que se hace click
  for (let i = 0; i < resultadoAllPokemons.length; i++) {
-    document.getElementById('allPokemons').innerHTML += '<span><img class="imgfilter" src="' + resultadoAllPokemons[i] + ' "></span>'; // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+    document.getElementById('allPokemons').innerHTML += ` <div class="column is-one-quarter">
+    <div class="card gradiantContainer">
+  
+    <div class="card-content is-flex is-horizontal-center">
+      <figure class="image is-128x128">
+          <img class="backgroundImage is-rounded" src="${resultadoAllPokemons[i]}">
+      </figure>
+      </div>
+  
+      </div>
+      </div>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
   }
 
 
@@ -117,7 +130,24 @@ let resultsort = window.poke.sortData(sortOrder);
 
 resultsort.forEach(elementos => {
     document.getElementById('allPokemons').innerHTML += 
-    `<span><h4>${elementos.name}</h4><a href=""><img class="imgfilter" src="${elementos.img}"></a></span>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+    `
+    <div class="column is-one-quarter">
+  <div class="card gradiantContainer">
+  <div class ="backgroundColor">
+  <div class="margin-card">
+    <div class="media-content">
+        <p class="title is-6 has-text-white">${elementos.name}</p>
+    </div>
+  </div>
+  </div>
+  <div class="card-content is-flex is-horizontal-center">
+    <figure class="image is-128x128">
+        <img class="backgroundImage is-rounded" src="${elementos.img}">
+    </figure>
+    </div>
+
+    </div>
+    </div>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
 })
 
 });
@@ -132,7 +162,24 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
 
     resultfilter.forEach(elemento => {
             document.getElementById('allPokemons').innerHTML += 
-            `<span><h4>${elemento.name}</h4><a href=""><img class="imgfilter" src="${elemento.img}"></a></span>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
+            `
+              <div class="column is-one-quarter">
+            <div class="card gradiantContainer">
+            <div class ="backgroundColor">
+            <div class="margin-card">
+              <div class="media-content">
+                  <p class="title is-6 has-text-white">${elemento.name}</p>
+              </div>
+            </div>
+            </div>
+            <div class="card-content is-flex is-horizontal-center">
+              <figure class="image is-128x128">
+                  <img class="backgroundImage is-rounded" src="${elemento.img}">
+              </figure>
+              </div>
+        
+              </div>
+              </div>` // imprimo en el HTML cada nombre que está dentro de cada posición del arreglo.
       
         })
 
@@ -141,34 +188,42 @@ document.getElementById("typePokemon").addEventListener("change", choose => {
 
 // Navbar Burger 
 
+
+let resultcompute = window.poke.computeStats(); 
+resultcompute();
+window.resultcompute;
+window.data;
+})
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+  
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+  
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+  
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+  
+        });
       });
-    });
-  }
+    }
+  
+  });
 
-});
 
 
-//  Promediar datos
-let resultCompute = window.poke.computeStats();
-resultCompute();
 
