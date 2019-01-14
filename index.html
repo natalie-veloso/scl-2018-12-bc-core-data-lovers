@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 
   <head>
 
@@ -11,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 
    
@@ -20,11 +20,11 @@
   <body>
 
       <header class="hero-head">
-        <nav class="navbar is-primary">
+        <nav class="navbar navbar-back">
           <div class="container">
             <div class="navbar-brand">
               <a href="" class="navbar-brand">
-                <img class="logo" src="img/Logo PokeSchool72.png">
+                <img class="logo" src="img/logoPokeschool.png" alt="logo-pokeschool">
               </a>
               <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -52,7 +52,7 @@
   <div class="columns">
       <div class="column"></div>
       <div class="column is-two-fifths">
-        <div class="gradiantContainer1">
+        <div class="gradiantContaineruno">
                   <h1 class="title has-text-white">
                      ¡Bienvenidos a PokeSchool!</h1>
                    <p class="has-text-white">
@@ -63,7 +63,7 @@
 
                      <div class="searching">
                        <input type="text"  name="name" list="names"  id="search"  class="input is-success input-size" placeholder="¿Quién es ese Pokémon?">
-                       <a id="btnSearch" type="submit" class="button is-primary searchButton">
+                       <a id="btnSearch" class="button is-primary searchButton">
                         <span class="icon"><i class="fas fa-search"></i></span> </a>
                         <datalist id="names" ></datalist>
                      </div>
@@ -74,37 +74,29 @@
 
     </div> 
 
-  </div>
-  
-  <div class="container">
-  <div class="columns">
-    <!-- <div class="column is-one-third">
-        <figure class="image is-48x48">
-            <img class="home" src="img/Volver Home.png">
-          </figure>
-    </div> -->
+    <div class="columns marginiconos">
+        <div class="column"></div>
+
       <div class="column">
-        <figure class="image is-48x48">
-        <img  src="img/Ícono PokedexBlue.png">
-      </figure>
+       <div class="level is-mobile">
+                <div class="level-item "><figure class="image is-48x48"><img  src="img/PokedexBlue.png" alt="pokedex"></figure></div>
+
+                <div class="level-item "><figure class="image is-48x48"><img src="img/Pokemon.png" alt="pokemon"></figure></div>
+
+                <div class="level-item "> <figure class="image is-48x48"><img src="img/Pokebolae.png" alt="pokebola"></figure> </div>
       </div>
-      <div class="column">
-        <figure class="image is-48x48">
-        <img src="img/Pokémon.png">
-        </figure>
-      </div>
-      <div class="column">
-        <figure class="image is-48x48">
-        <img src="img/Pokebola Evolución.png">
-        </figure>
-      </div>
-      <!-- <div class="column is-one-third"></div>
-      <figure class="image is-64x64">
-          <img class="ayuda" src="img/Ícono Ayuda.png">
-        </figure>
-    </div> -->
+
+     </div>
+
+
+          <div class="column"></div>
+
+</div>
+
+
   </div>
 
+         
   </section>        
        
   
@@ -118,10 +110,28 @@
                           <div id="root" >
                               <h1 class="title has-text-white">
                                 ¿Quién es ese Pokémon?</h1>    
-                              <img class="icono" src="img/Pokémon.png">
+                              <img class="icono" src="img/Pokemon.png" alt="pokemon">
                           </div>
                        </div>
                   </div>
+                  <!-- Pokemon iconos activos -->
+                  <div class="columns marginiconos">
+                      <div class="column"></div>
+                      <div class="column">
+                     <div class="level is-mobile">
+                              <div class="level-item "><figure class="image is-48x48"><img  src="img/pokedex.png" alt="pokedex"></figure></div>
+              
+                              <div class="level-item "><figure class="image is-48x48"><img src="img/PokemonBlue.png" alt="pokemon"></figure></div>
+              
+                              <div class="level-item "> <figure class="image is-48x48"><img src="img/Pokebolae.png" alt="pokebola"></figure> </div>
+                    </div>
+              
+                   </div>
+              
+              
+                        <div class="column"></div>
+                           </div>
+              
                </div>
           </div>
       </section>
@@ -189,6 +199,25 @@
                      </div>
 
                  </div>
+      <!-- Pokemon iconos activos -->
+      <div class="columns marginiconos">
+          <div class="column"></div>
+          <div class="column">
+         <div class="level is-mobile">
+                  <div class="level-item "><figure class="image is-48x48"><img  src="img/pokedex.png" alt="pokedex"></figure></div>
+  
+                  <div class="level-item "><figure class="image is-48x48"><img src="img/Pokemon.png" alt="pokemon"></figure></div>
+  
+                  <div class="level-item "> <figure class="image is-48x48"><img src="img/Pokebola.png" alt="pokebol"></figure> </div>
+        </div>
+  
+       </div>
+  
+  
+            <div class="column"></div>
+               </div>
+         <!-- *** Fin de Pokemon iconos activos -->
+
             </div>
           </div>
         </section>
@@ -213,7 +242,10 @@
                   <div class="card-content is-flex is-horizontal-center">
                     <div class="content has-text-white">
                       <div class="columns">
-                        <div class="column"><div id="donutchart" ></div>
+                        <div class="column">
+                          <h5 class="has-text-white">Kanto (Kanto en inglés, カントー Kantō en japonés) es una región del mundo Pokémon situada al este de Johto y al sur de Sinnoh.  </h5>
+                          <p class="has-text-white">En la Región Kanto existen los Pokemon de la primera generación, estos son 151 y se dividen en 15 tipos como los siguientes:</p>
+                          <div id="donutchart" class="chart" ></div>
                         <div id="curiosNotes"></div>
                       </div>
                           
@@ -228,26 +260,80 @@
               
 
             </div>
-       </div>
- 
+       
        </section>
+       
+
+        <a href="#" onclick="refs.modalEdicion.open()" class="float">
+          <img src="img/iconoayuda.png" alt="ayuda">
+          </a>
+          <div class="label-container">
+          <div class="label-text">¡Hola! Soy Ash</div>
+          <i class="fa fa-play label-arrow"></i>
+          </div>
+
 
 
        <footer>
         <div class="content has-text-centered has-text-white">                       
-              <p>PokeSchool por Gloria Moraga y Natalie Veloso. Todos los derechos reservados.<br/>Santiago de Chile</p>
+              <p><strong class="has-text-white">PokeSchool </strong>  ©  Todos los derechos reservados.<br/> Made with ❤  Gloria Moraga & Natalie Veloso. </p>
         </div>
        </footer>
+
+  
+      <div class="modal" id="modalEdicion">
+          <div onclick="refs.modalEdicion.close()" class="modal-background"></div>
+        
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">
+        Bienvenidos a POKESCHOOL.</p>
+      
+    </header>
+    <section class="modal-card-body">
+      <p class="has-text-white">Hola, Soy Ash!</p>
+      <p class="has-text-white">Pokeschool es tu lugar ideal para aprender de los 151 pokemones de la Region de Kanto,
+        puedes utilizar las diferentes herramientas para conocer acerca de tu Pokemon favoritos.</p>
+
+       <p class="has-text-white"> En el buscador puedes buscar entre los 151 pokemones y revisar sus cracteristicas especiales.</p>
+
+       
+       <p class="has-text-white"> Muy pronto, tendremos la biblioteca de Kanto, las trivias y mucho mas para que llegues a ser el mejor de todos.</p>
+      
+    </section>
+  </div>
+          <button class="modal-close is-large" aria-label="close" onclick="refs.modalEdicion.close()"></button>
+      </div>
+
+
+
+
+     <!-- Data JavaScript -->
+<script>
+
+let refs = {
+  modalEdicion: {
+    open: function() { document.getElementById('modalEdicion').classList.add('is-active');
+    },
+    close:function() { document.getElementById('modalEdicion').classList.remove('is-active');
+                      
+    }
+  }
+};
+
+$(window).resize(function(){
+ donutchart();
+ });
+</script>
+
+
     <!-- enlace Google Chart -->
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-     <!-- Data JavaScript -->
-
      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script type="module" src="./data/pokemon/pokemon.js"></script>
-    <script type="module" src="data.js"></script>
-    <script type="module" src="main.js"></script>
+    <script src="./data/pokemon/pokemon.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
 
     </body>
 
