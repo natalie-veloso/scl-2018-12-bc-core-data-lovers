@@ -32,7 +32,7 @@ Esto nos lleva a formar nuestro **User Persona** que, aunque son de edades muy d
 
   - **Mostrar** contenido con breve introducción sobre la página.
 
-  * _"Como usuario necesito saber cómo se escribe el nombre del pokémon que quiero buscar, para no equivocarme y poder ver sus características."_
+* _"Como usuario necesito saber cómo se escribe el nombre del pokémon que quiero buscar, para no equivocarme y poder ver sus características."_
     - **Mostrar** barra de búsqueda.
 
     - **Interpretar** la búsqueda del usuario (mostrar barra con opciones predeterminadas).
@@ -265,12 +265,12 @@ https://drive.google.com/file/d/1nSPYcgmD_CGD-_Z13AmeYq0BFkVp34Kj/view?usp=shari
 ## Nuevos Testeos Usabilidad
 Luego de esta actualización, se volvieron a realizar testeos de los que se concluye lo siguiente:
 
-- Página intuitiva, aunque nuevamente genera un poco de confusión los botones de posición de pantalla, ya que debería incluir algún texto que acompañe los íconos para su mejor comprensión. Los usuarios cumplen las tareas a realizar y coincide su interacción en el botón ordenar para visualizar los 151 pokémon, por lo tanto son en estos puntos donde se debe volver a iterar para las próximas actualizaciones.
+- Los usuarios definen la página como intuitiva, aunque nuevamente genera un poco de confusión los botones de posición de pantalla, ya que debería incluir algún texto que acompañe los íconos para su mejor comprensión. Los usuarios cumplen las tareas a realizar y coincide su interacción en el botón ordenar para visualizar los 151 pokémon, por lo tanto son en estos puntos donde se debe volver a iterar para las próximas actualizaciones.
 
 Puedes ver los videos de algunos testeos en el siguiente link:
 https://drive.google.com/drive/folders/1LxuWLHxvKo9RJCYjC2M0pywEtsaepUUe?usp=sharing
 
-## Otros
+## Otros / Planificación
 Puedes ver nuestra planificación para el desarrollo de este proyecto en el siguiente link: https://trello.com/b/ViKlof4v/data-lovers
 
 Nuevas tareas realizadas en:
