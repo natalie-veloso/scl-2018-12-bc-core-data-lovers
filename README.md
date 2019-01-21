@@ -26,24 +26,50 @@ Esto nos lleva a formar nuestro **User Persona** que, aunque son de edades muy d
 </p>
 
 ## Historias de Usuario + Definition of Done
+
+* _"Como usuario, siendo la primera vez que ingreso a la página, necesito conocer de qué se trata para saber rápidamente si me entregará la información que ando buscando."_
+  - **Mostrar** mensaje de bienvenida.
+
+  - **Mostrar** contenido con breve introducción sobre la página.
+
+  * _"Como usuario necesito saber cómo se escribe el nombre del pokémon que quiero buscar, para no equivocarme y poder ver sus características."_
+    - **Mostrar** barra de búsqueda.
+
+    - **Interpretar** la búsqueda del usuario (mostrar barra con opciones predeterminadas).
+
+    - Si ingresa una letra con la que no existe nombre de un pokémon, no mostrar sugerencias, mostrar **mensaje de error**.
+
+    - Permitir **seleccionar** nombre del pokémon.
+
+    - Acompañar la barra de búsqueda con un botón **"ok"** o presionar **"enter** para que se realice la acción.
+
+    - **Mostrar** características, nombre e imagen del pokémon.
+
 * _"Como jugador de Pokémon Go, necesito saber qué pokémon son tipo agua, para ganar la batalla."_
+
+  - **Mostrar** sección "Tipos de Pokémon".
+
   - **Filtrar** pokemones por tipo (planta, veneno, fuego, volador, agua, bicho, normal, eléctrico, tierra, hada, lucha, psíquico, roca, acero, hielo, fantasma, dragón).
 
 * _"Como jugador y principiante de Pokémon Go, quiero saber cuántos pokémon habitaban en la región de Kanto, para saber cuántos tengo que capturar."_
+    - **Mostrar** texto que indique la cantidad de pokémon que habitan en la región de Kanto (151).
+
     - **Mostrar** 151 pokémon.
 
 * _"Como usuario y un poco fanático de la serie Pokémon, quiero ver los nombres de los pokémon de la _"A"_ a la _"Z"_ para aprendérmelos."_
     - **Ordenar** por orden alfabético.
 
-* _"Como usuario necesito saber cómo se escribe el nombre del pokémon que quiero buscar, para no equivocarme y poder ver sus características."_
-    - **Mostrar** sugerencias de nombre al ingresar una letra.
-
 * _"Como usuario necesito ver: tipo, nombre, imagen y evolución (si es que tiene) del pokémon que busco y si aparece en huevo, para mejorar mis estrategias en el juego."_
-    - **Mostrar** nombre, imagen, evolución, tipo y evolución.
+    - **Mostrar** nombre, imagen, evolución, tipo, evolución y si aparece en huevo.
 
 
-* _Como usuario y jugador de Pokémon Go, necesito saber cuántos caramelos necesito para evolucionar a mi pokémon._
+* _"Como usuario y jugador de Pokémon Go, necesito saber cuántos caramelos necesito para evolucionar a mi pokémon."_
     - **Mostrar** datos relevantes, ej: caramelos.
+
+* _"Como usuario, tengo dudas sobre cómo puedo ver las características de un pokémon."_
+    - **Mostrar** sección de ayuda.
+
+
 
 ## DISEÑO  INTERFAZ DE USUARIO
 
