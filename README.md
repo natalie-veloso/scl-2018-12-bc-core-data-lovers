@@ -197,7 +197,55 @@ En la barra de texto ingreso la letra _"F"_, inmediatamente y automaticamente se
 - En el último testeo los usuarios pudieron interactuar con la página y dentro de sus comentarios indicaron que les parecía muy bien que al ingresar una letra aparecieran sugerencias de nombres de pokémon con esa letra. Otra de sus observaciones fue que lo que nosotras diseñamos como "posición de la pantalla", ello/as lo relacionaron con un botón.
 
 ## Actualización
-En base a los testeos, pronto podrás ver las mejoras y actualizaciones en nuestra página web.
+En base a los últimos testeos se volvieron a realizar sketches y prototipo en alta definición, así que ahora podrás ver las nuevas actualizaciones de **PokeSchool** en el siguiente link:
+https://www.figma.com/file/ExV2M2YWFDpXGIWFLVB2EPYM/Iteraci%C3%B3n-PokeSchool?node-id=0%3A1
+
+| Sketch
+| -------------------------- |
+<p align="center">
+    <img src="imgreadme/sketch4.jpg">
+</p>
+
+
+### Prototipo Alta Definición
+| Mensaje Error
+| -------------------------- |
+<p align="center">
+    <img src="imgreadme/mensaje-error.png">
+</p>
+
+| Pokémon
+| -------------------------- |
+<p align="center">
+    <img src="imgreadme/actualizacion-pokemon.png">
+</p>
+
+| Chat Ayuda
+| -------------------------- |
+<p align="center">
+    <img src="imgreadme/actualizacion-chat.png">
+</p>
+
+| Tipos Pokémon / Ordenar
+| -------------------------- |
+<p align="center">
+    <img src="imgreadme/actualizacion-151pokemon.png">
+</p>
+
+## Heurística
+Para cumplir con las actualizaciones de la página y detectar aspectos a mejorar, se realizó el método heurística que puedes ver en mayor detalle dirigiéndote al siguiente link:
+https://drive.google.com/file/d/1nSPYcgmD_CGD-_Z13AmeYq0BFkVp34Kj/view?usp=sharing
+
+## Nuevos Testeos Usabilidad
+Luego de esta actualización, se volvieron a realizar testeos de los que se concluye lo siguiente:
+
+- Página intuitiva, aunque nuevamente genera un poco de confusión los botones de posición de pantalla, ya que debería incluir algún texto que acompañe los íconos para su mejor comprensión. Los usuarios cumplen las tareas a realizar y coincide su interacción en el botón ordenar para visualizar los 151 pokémon, por lo tanto son en estos puntos donde se debe volver a iterar para las próximas actualizaciones.
+
+Puedes ver los videos de algunos testeos en el siguiente link:
+https://drive.google.com/drive/folders/1LxuWLHxvKo9RJCYjC2M0pywEtsaepUUe?usp=sharing
 
 ## Otros
 Puedes ver nuestra planificación para el desarrollo de este proyecto en el siguiente link: https://trello.com/b/ViKlof4v/data-lovers
+
+Nuevas tareas realizadas en:
+https://trello.com/b/kBNtsZ5c/extensi%C3%B3n-data-lovers
